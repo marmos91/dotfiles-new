@@ -1,0 +1,14 @@
+[user]
+  name = Marco Moschettini
+  email = m.marmos@gmail.com
+
+[github]
+  user = marmos91
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = nano
+  filemode = false
+  trustctime = false
+  autocrlf = input
+  pager = diff-so-fancy | less --tabs=4 -RFX

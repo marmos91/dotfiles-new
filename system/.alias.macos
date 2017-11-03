@@ -1,0 +1,7 @@
+# Copy pwd to clipboard
+
+alias cpwd="pwd|tr -d '\n'|pbcopy"
+alias cask="brew cask"
+alias chrome="open -a ~/Applications/Google\ Chrome.app"
+alias git=hub
+alias zip="zip -x *.DS_Store -x *__MACOSX* -x *.AppleDouble*"
