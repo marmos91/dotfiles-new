@@ -6,9 +6,15 @@
   user = marmos91
 
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/marcomoschettini/.gitignore_global
   editor = vim
   filemode = false
   trustctime = false
   autocrlf = input
   pager = diff-so-fancy | less --tabs=4 -RFX
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
