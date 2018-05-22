@@ -10,7 +10,6 @@ brew tap caskroom/fonts
 
 apps=(
   alfred
-  atom
   bettertouchtool
   boom-3d
   cleanmymac
@@ -20,11 +19,12 @@ apps=(
   flux
   go2shell
   google-chrome
-  google-drive
+  google-backup-and-sync
   handbrake
   image2icon
   iterm2
   jdownloader
+  magnet
   parallels
   slack
   sketch
@@ -34,13 +34,12 @@ apps=(
   tableplus
   telegram
   transmission
-  visual-studio-code
+  visual-studio-code-insiders
   vlc
-  webstorm
   whatsapp
 )
 
 brew cask install "${apps[@]}"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package

@@ -13,11 +13,9 @@ brew upgrade
 apps=(
     dockutil
     ffmpeg
-    hub
     python
     ssh-copy-id
     wget
-    wifi-password
 )
 
 brew install "${apps[@]}"

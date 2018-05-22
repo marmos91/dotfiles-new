@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-# Get current dir (so run this script from anywhere)
+export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-export DOTFILES_DIR DOTFILES_CACHE DOTFILES_EXTRA_DIR
-DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-DOTFILES_CACHE="$DOTFILES_DIR/.cache.sh"
-DOTFILES_EXTRA_DIR="$HOME/.extra"
+mkdir -p ~/.dotfiles
 
 # Make utilities available
 
@@ -17,9 +14,17 @@ ln -sfv "$DOTFILES_DIR/runcom/.zshrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 
-# Package managers & packages
+# Installing fonts
 
-. "$DOTFILES_DIR/install/brew.sh"
-. "$DOTFILES_DIR/install/npm.sh"
-. "$DOTFILES_DIR/install/zsh.sh"
-. "$DOTFILES_DIR/install/brew-cask.sh"
+cp "$DOTFILES_DIR/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf" ~/Library/Fonts
+# cp "$DOTFILES_DIR/fonts/Bariol.ttf" ~/Library/Fonts
+
+#. "$DOTFILES_DIR/install/brew.sh"
+# . "$DOTFILES_DIR/install/brew-cask.sh"
+# . "$DOTFILES_DIR/install/npm.sh"
+# . "$DOTFILES_DIR/install/zsh.sh"
+
+# MacOS preferences
+
+. "$DOTFILES_DIR/macos/dock.sh"
+. "$DOTFILES_DIR/macos/defaults.sh"

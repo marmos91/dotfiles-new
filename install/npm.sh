@@ -3,22 +3,21 @@ if ! is-executable brew -o ! is-executable git; then
   return
 fi
 
-brew install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+nvm install 8
 
 # Globally install with npm
 
 packages=(
-  get-port-cli
-  gtop
-  historie
-  nodemon
-  npm
-  release-it
-  spot
-  superstatic
-  svgo
-  tldr
-  underscore-cli
+  gulp
+  typescript
+  tslint
+  peerflix
+  http-server
 )
 
 npm install -g "${packages[@]}"

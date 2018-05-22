@@ -1,5 +1,5 @@
 
-COMPUTER_NAME="MBP"
+COMPUTER_NAME="Marco's MBP"
 
 osascript -e 'tell application "System Preferences" to quit'
 
@@ -33,17 +33,17 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
-
-# Disable Notification Center and remove the menu bar icon
-# launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable smart dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent YES
+
+# Enable dark theme
+osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to not dark mode'
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -54,10 +54,16 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Trackpad: swipe between pages with three fingers
+# Trackpad: swipe between pages with four fingers
 defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.fourFingerHorizSwipeGesture -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerHorizSwipeGesture -int 1
+
+# Trackpad: go back in history with three fingers
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+
+# Trackpad: increase pointer speed
+defaults write -g com.apple.trackpad.scaling 5.0
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
@@ -67,7 +73,7 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Automatically illuminate built-in MacBook keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
@@ -76,7 +82,7 @@ defaults write com.apple.BezelServices kDim -bool true
 defaults write com.apple.BezelServices kDimTime -int 300
 
 # Disable auto-correct
-# defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Stop iTunes from responding to the keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
@@ -138,17 +144,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Use AirDrop over every interface.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
-# Always open everything in Finder's list view.
-# Use list view in all Finder windows by default
-# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
-# Disable the warning before emptying the Trash
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
-
-# Enable the MacBook Air SuperDrive on any Mac
-# sudo nvram boot-args="mbasd=1"
-
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
 defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true OpenWith -bool true Privileges -bool true
@@ -169,6 +164,9 @@ defaults write com.apple.dock autohide -bool true
 # Place the dock to the left
 defaults write com.apple.dock orientation -string left
 
+# Set dock size
+defaults write com.apple.dock tilesize -int 49
+
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
@@ -187,38 +185,6 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
-
-###############################################################################
-# Hot corners                                                                 #
-###############################################################################
-
-# Possible values:
-# 0: no-op
-# 2: Mission Control
-# 3: Show application windows
-# 4: Desktop
-# 5: Start screen saver
-# 6: Disable screen saver
-# 7: Dashboard
-# 10: Put display to sleep
-# 11: Launchpad
-# 12: Notification Center
-
-# Top left screen corner
-#defaults write com.apple.dock wvous-tl-corner -int 0
-#defaults write com.apple.dock wvous-tl-modifier -int 0
-
-# Top right screen corner
-#defaults write com.apple.dock wvous-tr-corner -int 0
-#defaults write com.apple.dock wvous-tr-modifier -int 0
-
-# Bottom left screen corner → Display to sleep
-#defaults write com.apple.dock wvous-bl-corner -int 10
-#defaults write com.apple.dock wvous-bl-modifier -int 0
-
-# Bottom right screen corner
-#defaults write com.apple.dock wvous-br-corner -int 0
-#defaults write com.apple.dock wvous-br-modifier -int 0
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -241,12 +207,6 @@ defaults write com.apple.Safari HomePage -string "about:blank"
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
-# Allow hitting the Backspace key to go to the previous page in history
-# defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
-
-# Hide Safari’s bookmarks bar by default
-# defaults write com.apple.Safari ShowFavoritesBar -bool false
-
 # Disable Safari’s thumbnail cache for History and Top Sites
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
@@ -255,9 +215,6 @@ defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
 # Remove useless icons from Safari’s bookmarks bar
 defaults write com.apple.Safari ProxiesInBookmarksBar "()"
-
-# Allow hitting the Backspace key to go to the previous page in history
-# defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
 
 # Enable the Develop menu, the Web Inspector, and the debug menu in Safari
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
@@ -275,10 +232,6 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Display emails in threaded mode
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
 
-# Disable send and reply animations in Mail.app
-# defaults write com.apple.mail DisableReplyAnimations -bool true
-# defaults write com.apple.mail DisableSendAnimations -bool true
-
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
@@ -287,12 +240,6 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # Disable automatic spell checking
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
-
-# Disable sound for incoming mail
-defaults write com.apple.mail MailSound -string ""
-
-# Disable sound for other mail actions
-defaults write com.apple.mail PlayMailSounds -bool false
 
 # Mark all messages as read when opening a conversation
 defaults write com.apple.mail ConversationViewMarkAllAsRead -bool true
@@ -364,6 +311,6 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal"; do
+for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal" "SystemUIServer"; do
   killall "${app}" &> /dev/null
 done
