@@ -19,10 +19,10 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 cp "$DOTFILES_DIR/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf" ~/Library/Fonts
 # cp "$DOTFILES_DIR/fonts/Bariol.ttf" ~/Library/Fonts
 
-#. "$DOTFILES_DIR/install/brew.sh"
-# . "$DOTFILES_DIR/install/brew-cask.sh"
-# . "$DOTFILES_DIR/install/npm.sh"
-# . "$DOTFILES_DIR/install/zsh.sh"
+. "$DOTFILES_DIR/install/brew.sh"
+. "$DOTFILES_DIR/install/brew-cask.sh"
+. "$DOTFILES_DIR/install/npm.sh"
+. "$DOTFILES_DIR/install/zsh.sh"
 
 # MacOS preferences
 
