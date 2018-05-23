@@ -15,7 +15,11 @@ CASE_SENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # ZSH plugins
-plugins=(git osx git-flow zsh-syntax-highlighting npm z)
+plugins=(
+  git 
+  zsh-syntax-highlighting 
+  zsh-autosuggestions
+)
 
 # Source dotfiles
 for DOTFILE in "$DOTFILES_DIR"/system/.{alias}; do
