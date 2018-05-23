@@ -15,7 +15,7 @@ CASE_SENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # ZSH plugins
-plugins=(git osx git-flow npm z)
+plugins=(git osx git-flow zsh-syntax-highlighting npm z)
 
 # Source dotfiles
 for DOTFILE in "$DOTFILES_DIR"/system/.{alias}; do
@@ -23,13 +23,15 @@ for DOTFILE in "$DOTFILES_DIR"/system/.{alias}; do
 done
 
 if is-macos; then
-  for DOTFILE in "$DOTFILES_DIR"/system/.{alias}.macos; do
+  for DOTFILE in "$DOTFILES_DIR"/system/.alias.macos; do
     [ -f "$DOTFILE" ] && . "$DOTFILE"
   done
 fi
 
 source $ZSH/oh-my-zsh.sh
 . ~/.dotfiles/runcom/z.sh
+
+nvm use --delete-prefix v8.11.2 --silent
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
