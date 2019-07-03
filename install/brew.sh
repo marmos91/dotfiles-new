@@ -12,10 +12,9 @@ brew upgrade
 
 apps=(
     dockutil
-    ffmpeg
     python
-    ssh-copy-id
     wget
+    cmake
 )
 
 brew install "${apps[@]}"

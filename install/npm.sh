@@ -8,16 +8,14 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-nvm install 8
+nvm install 12
 
 # Globally install with npm
 
 packages=(
-  gulp
-  typescript
-  tslint
-  peerflix
+  npm-check
   http-server
+  commitizen
 )
 
 npm install -g "${packages[@]}"

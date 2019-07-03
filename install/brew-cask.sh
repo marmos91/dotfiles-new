@@ -9,23 +9,20 @@ brew tap caskroom/fonts
 # Install packages
 
 apps=(
-  alfred
+  authy
+  bartender
   bettertouchtool
-  boom-3d
-  cleanmymac
-  cyberduck
   docker
   dropbox
   flux
   go2shell
   google-chrome
   google-backup-and-sync
+  gpg-suite
   handbrake
-  image2icon
+  istat-menus
   iterm2
   jdownloader
-  magnet
-  parallels
   slack
   sketch
   skype
@@ -33,8 +30,9 @@ apps=(
   spotify
   tableplus
   telegram
+  the-unarchiver
   transmission
-  visual-studio-code-insiders
+  visual-studio-code
   vlc
   whatsapp
 )
@@ -42,4 +40,4 @@ apps=(
 brew cask install "${apps[@]}"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
+# brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
