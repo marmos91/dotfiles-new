@@ -22,23 +22,23 @@ chmod +x ./install.sh
 To install iTerm color schema and custom fonts open iTerm preferences and go to the `Profile` tab.
 Under the `Text` tab select the `SourceCodePro+Powerline+Awesome+Regular` font
 
-![iterm-text]()
+![iterm-text](https://raw.githubusercontent.com/marmos91/dotfiles/master/assets/iterm-text.png)
 
 Under the `Colors` tab click on the `Color Preset` option
 
-![iterm-text]()
+![iterm-colors-1](https://raw.githubusercontent.com/marmos91/dotfiles/master/assets/iterm-colors-1.png)
 
 Then select `Import...`
 
-![iterm-text]()
+![iterm-colors-2](https://raw.githubusercontent.com/marmos91/dotfiles/master/assets/iterm-colors-2.png)
 
 And select the `colors.itermcolors` file located in the `~/.dotfiles/iterm` folder
 
-![iterm-text]()
+![iterm-colors-3](https://raw.githubusercontent.com/marmos91/dotfiles/master/assets/iterm-colors-3.png)
 
 Finally select the just imported color scheme (`colors`) from the `Color Preset` menu again
 
-![iterm-text]()
+![iterm-colors-4](https://raw.githubusercontent.com/marmos91/dotfiles/master/assets/iterm-colors-4.png)
 
 Enjoy your new terminal 😊
 
