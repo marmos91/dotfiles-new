@@ -29,6 +29,7 @@ apps=(
   thefuck
   tig
   tree
+  vim
   wget
   z
 )

@@ -27,7 +27,6 @@ plugins=(
 
 # Source dotfiles
 for DOTFILE in "$DOTFILES_DIR"/alias/.alias; do
-  echo "$DOTFILE"
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 

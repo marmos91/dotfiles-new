@@ -10,7 +10,7 @@ apps=(
   441258766 # Magnet
   409201541 # Pages
   562184107 # LanScan Pro
-  # 497799835 # XCode
+  497799835 # XCode
 )
 
 mas install "${apps[@]}"

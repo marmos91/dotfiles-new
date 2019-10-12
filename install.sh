@@ -3,8 +3,6 @@
 # Author: Marco Moschettini
 # Version: 1.0.0
 
-# set -e
-
 function log
 {
     echo "${BLUE}${UNDERLINE}$1${RESET}" 
