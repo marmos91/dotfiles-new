@@ -9,6 +9,7 @@ apps=(
   authy
   bartender
   bettertouchtool
+  cleanmymac
   docker
   flux
   go2shell
