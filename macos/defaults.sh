@@ -1,5 +1,7 @@
-
-COMPUTER_NAME="Marco's MBP"
+if ! is-macos; then
+  echo "Skipped: OSX defaults"
+  return
+fi
 
 osascript -e 'tell application "System Preferences" to quit'
 
@@ -9,6 +11,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+echo "Setting up defaults for General UI/UX"
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
@@ -16,7 +19,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "$COMPUTER_NAME"
 sudo scutil --set HostName "$COMPUTER_NAME"
-sudo scutil --set LocalHostName "$COMPUTER_NAME"
+# sudo scutil --set LocalHostName "$COMPUTER_NAME"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
 # Expand save panel by default
@@ -43,8 +46,9 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write com.apple.menuextra.battery ShowPercent YES
 
 # Enable dark theme
-osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to not dark mode'
+osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to true'
 
+echo "Setting up defaults for Trackpad, Mouse, Keyboard and Bluetooth accessories"
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
@@ -68,9 +72,6 @@ defaults write -g com.apple.trackpad.scaling 5.0
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
-# Follow the keyboard focus while zoomed in
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
-
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
@@ -85,8 +86,9 @@ defaults write com.apple.BezelServices kDimTime -int 300
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
+echo "Setting up defaults for Screen"
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -101,6 +103,7 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
+echo "Setting up defaults for Finder"
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
@@ -148,6 +151,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # “General”, “Open with”, and “Sharing & Permissions”
 defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true OpenWith -bool true Privileges -bool true
 
+echo "Setting up defaults for Dock"
 ###############################################################################
 # Dock                                                                        #
 ###############################################################################
@@ -173,6 +177,7 @@ defaults write com.apple.dock showhidden -bool true
 # No bouncing icons
 defaults write com.apple.dock no-bouncing -bool true
 
+echo "Setting up defaults for Dashboard"
 ###############################################################################
 # Dashboard                                                                   #
 ###############################################################################
@@ -186,6 +191,7 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
+echo "Setting up defaults for Safari"
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
@@ -225,6 +231,7 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+echo "Setting up defaults for Mail"
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
@@ -244,6 +251,7 @@ defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnab
 # Mark all messages as read when opening a conversation
 defaults write com.apple.mail ConversationViewMarkAllAsRead -bool true
 
+echo "Setting up defaults for Terminal"
 ###############################################################################
 # Terminal                                                                    #
 ###############################################################################
@@ -262,6 +270,7 @@ defaults write com.apple.terminal "VisualBell" -bool false
 # Disable the annoying line marks
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
+echo "Setting up defaults for Activity Monitor"
 ###############################################################################
 # Activity Monitor                                                            #
 ###############################################################################
@@ -279,6 +288,7 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
+echo "Setting up defaults for Mac App Store"
 ###############################################################################
 # Mac App Store                                                               #
 ###############################################################################
@@ -311,6 +321,7 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
+echo "Killing affected applications"
 for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal" "SystemUIServer"; do
   killall "${app}" &> /dev/null
 done

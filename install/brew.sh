@@ -3,18 +3,34 @@ if ! is-macos -o ! is-executable ruby -o ! is-executable curl -o ! is-executable
   return
 fi
 
+if is-executable brew; then
+  echo "Skipped: Homebrew already installed"
+  return
+fi
+
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew update
 brew upgrade
 
-# Install packages
-
 apps=(
-    dockutil
-    python
-    wget
-    cmake
+  awscli
+  diff-so-fancy
+  dockutil
+  git-flow
+  git-lfs
+  hub
+  kubectl
+  jq
+  mas
+  ninja
+  python
+  python3
+  thefuck
+  tig
+  tree
+  wget
+  z
 )
 
 brew install "${apps[@]}"

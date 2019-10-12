@@ -3,9 +3,6 @@ if ! is-macos -o ! is-executable brew; then
   return
 fi
 
-brew tap caskroom/cask
-brew tap caskroom/fonts
-
 # Install packages
 
 apps=(
@@ -13,7 +10,6 @@ apps=(
   bartender
   bettertouchtool
   docker
-  dropbox
   flux
   go2shell
   google-chrome
@@ -23,16 +19,17 @@ apps=(
   istat-menus
   iterm2
   jdownloader
+  minikube
+  postman
   slack
-  sketch
-  skype
-  sourcetree
   spotify
   tableplus
   telegram
   the-unarchiver
   transmission
+  tripmode
   visual-studio-code
+  virtualbox
   vlc
   whatsapp
 )

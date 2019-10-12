@@ -1,6 +1,6 @@
 # Environment
 export DOTFILES_DIR="$HOME/.dotfiles"
-. "$DOTFILES_DIR"/system/.env
+. "$DOTFILES_DIR"/.env
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -16,27 +16,33 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # ZSH plugins
 plugins=(
-  git 
+  git
+  git-extras
+  git-flow
+  iterm2
+  node
   zsh-syntax-highlighting 
   zsh-autosuggestions
 )
 
 # Source dotfiles
-for DOTFILE in "$DOTFILES_DIR"/system/.{alias}; do
+for DOTFILE in "$DOTFILES_DIR"/alias/.alias; do
+  echo "$DOTFILE"
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
 if is-macos; then
-  for DOTFILE in "$DOTFILES_DIR"/system/.alias.macos; do
+  for DOTFILE in "$DOTFILES_DIR"/alias/.alias.macos; do
     [ -f "$DOTFILE" ] && . "$DOTFILE"
   done
 fi
 
 source $ZSH/oh-my-zsh.sh
-. ~/.dotfiles/runcom/z.sh
+
+. /usr/local/etc/profile.d/z.sh
 
 nvm use --delete-prefix 12 --silent
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && . "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
