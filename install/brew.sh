@@ -10,6 +10,8 @@ fi
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+brew tap windmilleng/tap
+
 brew update
 brew upgrade
 
@@ -31,6 +33,7 @@ apps=(
   tree
   vim
   wget
+  windmilleng/tap/tilt
   z
 )
 
