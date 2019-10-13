@@ -33,6 +33,7 @@ apps=(
   virtualbox
   vlc
   whatsapp
+  yarn
 )
 
 brew cask install "${apps[@]}"

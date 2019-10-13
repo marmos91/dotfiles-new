@@ -1,6 +1,7 @@
 [user]
   name = Marco Moschettini
   email = m.marmos@gmail.com
+	signingkey = 387575CD05594FF9
 
 [github]
   user = marmos91
@@ -12,3 +13,5 @@
   trustctime = false
   autocrlf = input
   pager = diff-so-fancy | less --tabs=4 -RFX
+[hub]
+	protocol = ssh
