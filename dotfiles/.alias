@@ -1,0 +1,5 @@
+# Brew stuff
+alias cask="brew cask"
+
+# Git stuff
+alias git=hub

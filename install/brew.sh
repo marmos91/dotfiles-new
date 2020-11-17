@@ -8,7 +8,7 @@ if is-executable brew; then
   return
 fi
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 brew tap windmilleng/tap
 
@@ -21,20 +21,25 @@ apps=(
   dockutil
   git-flow
   git-lfs
+  fzf
   hub
   kubectl
   jq
+  k9s
   mas
   ninja
   python
   python3
   thefuck
   tig
+  tmux
   tree
   vim
   wget
   windmilleng/tap/tilt
   z
 )
+
+$(brew --prefix)/opt/fzf/install --completion --key-bindings
 
 brew install "${apps[@]}"

@@ -8,6 +8,9 @@ First of all clone this repository
 
 ```bash
 git clone https://github.com/marmos91/dotfiles.git
+cd dotfiles
+git submodule init
+git submodule update
 ```
 
 Run the following command

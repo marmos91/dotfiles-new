@@ -44,44 +44,44 @@ mkdir -p ~/.dotfiles
 log "[✓] Dotfiles directory created"
 
 log "[2/11] Installing Homebrew and command line utilites"
-. "$DOTFILES_DIR/install/brew.sh"
+# . "$DOTFILES_DIR/install/brew.sh"
 log "[✓] Homebrew and command line utilites installed"
 
 log "[3/11] Installing Homebrew cask and favorites applications"
-. "$DOTFILES_DIR/install/brew-cask.sh"
+# . "$DOTFILES_DIR/install/brew-cask.sh"
 log "[✓] Homebrew cask and favorites applications installed"
 
 log "[4/11] Installing Mac app store applications"
-. "$DOTFILES_DIR/install/mas.sh"
+# . "$DOTFILES_DIR/install/mas.sh"
 log "[✓] Mac app store applications installed"
 
 log "[5/11] Installing fonts"
-. "$DOTFILES_DIR/install/fonts.sh"
+# . "$DOTFILES_DIR/install/fonts.sh"
 log "[✓] Fonts installed"
 
 log "[6/11] Installing NodeJS"
-. "$DOTFILES_DIR/install/npm.sh"
+# . "$DOTFILES_DIR/install/npm.sh"
 log "[✓] NodeJS installed"
 
-log "[7/11] Installing Cmake from sources"
-. "$DOTFILES_DIR/install/cmake.sh"
-log "[✓] Cmake installed"
-
-log "[8/11] Installing Oh My Zsh"
+log "[7/11] Installing Oh My Zsh"
 . "$DOTFILES_DIR/install/zsh.sh"
 log "[✓] Oh My Zsh installed"
 
-log "[9/11] Setting OSX defaults"
-. "$DOTFILES_DIR/macos/defaults.sh"
+log "[8/11] Setting OSX defaults"
+# . "$DOTFILES_DIR/macos/defaults.sh"
 log "[✓] OSX defaults set"
 
-log "[10/11] Setting OSX dock"
-. "$DOTFILES_DIR/macos/dock.sh"
+log "[9/11] Setting OSX dock"
+# . "$DOTFILES_DIR/macos/dock.sh"
 log "[✓] OSX dock set"
 
-log "[11/11] Setting up dotfiles"
+log "[10/11] Setting up dotfiles"
 . "$DOTFILES_DIR/install/dotfiles.sh"
 log "[✓] Dotfiles set"
+
+log "[11/11] Installing Vim related stuff"
+. "$DOTFILES_DIR/install/vim.sh"
+log "[✓] Vim installed"
 
 log "[✓] Dotfiles installed: run the following command to load the new configuration"
 echo "source ~/.zshrc"

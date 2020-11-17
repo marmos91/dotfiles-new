@@ -11,28 +11,23 @@ apps=(
   bettertouchtool
   docker
   flux
-  go2shell
   google-chrome
   google-backup-and-sync
-  gpg-suite
   handbrake
   istat-menus
   iterm2
   jdownloader
-  minikube
   postman
   slack
   spotify
   tableplus
-  telegram
+  # telegram
   the-unarchiver
   transmission
   tripmode
   visual-studio-code
-  virtualbox
   vlc
   whatsapp
-  yarn
 )
 
 brew cask install "${apps[@]}"
