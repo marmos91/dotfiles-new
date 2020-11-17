@@ -22,13 +22,20 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  iterm2
-  node
-  npm 
+  jira
+  osx
   tmux
+  z
   zsh-syntax-highlighting 
   zsh-autosuggestions
 )
+
+# Tmux stuff
+ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_CONFIG=~/.tmux.conf
+
+# NVM plugin conf
+NVM_AUTOLOAD=1
 
 source $ZSH/oh-my-zsh.sh
 

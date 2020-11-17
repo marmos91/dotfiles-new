@@ -3,4 +3,4 @@ if ! is-macos -o ! is-executable brew; then
   return
 fi
 
-vim +PlugInstall +qall
+~/.tmux/plugins/tpm/bin/install_plugins
