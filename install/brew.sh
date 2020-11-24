@@ -19,7 +19,7 @@ apps=(
   awscli
   diff-so-fancy
   dockutil
-  git-flow
+  gh
   git-lfs
   fzf
   hub
