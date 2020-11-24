@@ -21,6 +21,7 @@ apps=(
   dockutil
   gh
   git-lfs
+  gpg
   fzf
   hub
   kubectl
