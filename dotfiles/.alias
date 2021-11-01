@@ -1,5 +1,6 @@
-# Brew stuff
-alias cask="brew cask"
-
 # Git stuff
 alias git=hub
+
+npkill() {
+    find "$@" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
+}

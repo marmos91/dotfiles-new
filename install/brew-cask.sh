@@ -9,14 +9,15 @@ apps=(
   authy
   bartender
   bettertouchtool
+  cubbit
   docker
   flux
   google-chrome
-  google-backup-and-sync
   handbrake
   istat-menus
   iterm2
   jdownloader
+  nordvpn
   postman
   slack
   spotify
@@ -30,7 +31,7 @@ apps=(
   whatsapp
 )
 
-brew cask install "${apps[@]}"
+brew install --cask "${apps[@]}"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 # brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package

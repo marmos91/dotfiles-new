@@ -3,21 +3,21 @@ if ! is-macos -o ! is-executable ruby -o ! is-executable curl -o ! is-executable
   return
 fi
 
-if is-executable brew; then
-  echo "Skipped: Homebrew already installed"
-  return
+if ! is-executable brew; then
+  echo "Brew is missing. Installing it"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
 brew tap windmilleng/tap
+brew tap cubbit/tap
 
 brew update
 brew upgrade
 
 apps=(
   awscli
-  diff-so-fancy
+  bazelisk
+  cubbit
   dockutil
   gh
   git-lfs

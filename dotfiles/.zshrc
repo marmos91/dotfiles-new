@@ -22,17 +22,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  jira
   osx
-  tmux
   z
   zsh-syntax-highlighting 
   zsh-autosuggestions
 )
-
-# Tmux stuff
-ZSH_TMUX_AUTOSTART="true"
-ZSH_TMUX_CONFIG=~/.tmux.conf
 
 # NVM plugin conf
 NVM_AUTOLOAD=1
@@ -57,7 +51,7 @@ export EDITOR="vim"
 export NVM_DIR="/Users/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-nvm use --delete-prefix 12 --silent
+nvm use --delete-prefix 14 --silent
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

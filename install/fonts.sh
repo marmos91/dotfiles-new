@@ -15,4 +15,4 @@ rm -rf $DOTFILES_DIR/fonts/powerline
 
 cp "$DOTFILES_DIR/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf" ~/Library/Fonts
 
-brew cask install "${fonts[@]}"
+brew install --cask "${fonts[@]}"

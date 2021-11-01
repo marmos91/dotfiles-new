@@ -15,3 +15,7 @@
   pager = diff-so-fancy | less --tabs=4 -RFX
 [hub]
 	protocol = ssh
+[pull]
+	rebase = true
+[fetch]
+	prune = true

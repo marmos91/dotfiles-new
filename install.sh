@@ -72,7 +72,7 @@ log "[8/12] Setting OSX defaults"
 log "[✓] OSX defaults set"
 
 log "[9/12] Setting OSX dock"
-. "$DOTFILES_DIR/macos/dock.sh"
+# . "$DOTFILES_DIR/macos/dock.sh"
 log "[✓] OSX dock set"
 
 log "[10/12] Setting up dotfiles"
