@@ -13,6 +13,7 @@ apps=(
   docker
   flux
   google-chrome
+  gpg-suite
   handbrake
   istat-menus
   iterm2
