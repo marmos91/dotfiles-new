@@ -12,6 +12,7 @@ apps=(
   bettertouchtool
   cubbit
   docker
+  epic-games
   flux
   google-chrome
   gpg-suite
