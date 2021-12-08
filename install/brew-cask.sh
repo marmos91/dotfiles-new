@@ -20,7 +20,7 @@ apps=(
   istat-menus
   iterm2
   # jdownloader
-  logitech-eptions
+  logitech-options
   nordvpn
   postman
   slack
