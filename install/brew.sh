@@ -10,6 +10,7 @@ fi
 
 brew tap windmilleng/tap
 brew tap cubbit/tap
+brew tap homebrew/cask-drivers
 
 brew update
 brew upgrade

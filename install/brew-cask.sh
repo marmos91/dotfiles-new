@@ -6,6 +6,7 @@ fi
 # Install packages
 
 apps=(
+  1password
   authy
   bartender
   bettertouchtool
@@ -17,7 +18,8 @@ apps=(
   handbrake
   istat-menus
   iterm2
-  jdownloader
+  # jdownloader
+  logitech-eptions
   nordvpn
   postman
   slack
@@ -30,6 +32,7 @@ apps=(
   visual-studio-code
   vlc
   whatsapp
+  zoom 
 )
 
 brew install --cask "${apps[@]}"
