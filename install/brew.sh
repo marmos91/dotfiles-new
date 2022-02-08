@@ -18,14 +18,18 @@ brew upgrade
 apps=(
   awscli
   bazelisk
+  clang-format
   cubbit
   dockutil
   gh
   git-lfs
+  go-task/tap/go-task
   gpg
+  ffmpeg
   fzf
   hub
   kubectl
+  kubectx
   jq
   k9s
   mas
@@ -37,6 +41,7 @@ apps=(
   tmux
   tree
   vim
+  youtube-dl
   wget
   windmilleng/tap/tilt
   z
