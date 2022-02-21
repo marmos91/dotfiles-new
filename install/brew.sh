@@ -18,6 +18,7 @@ brew upgrade
 apps=(
   awscli
   bazelisk
+  buildifier
   clang-format
   cubbit
   dockutil
