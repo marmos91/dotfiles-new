@@ -19,6 +19,7 @@ brew upgrade
 apps=(
   adobe-creative-cloud
   awscli
+  bat
   bazelisk
   buildifier
   clang-format
@@ -38,6 +39,7 @@ apps=(
   kubectx
   jq
   k9s
+  lf
   mas
   ninja
   python
