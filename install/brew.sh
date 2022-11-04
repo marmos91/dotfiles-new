@@ -11,6 +11,7 @@ fi
 brew tap windmilleng/tap
 brew tap cubbit/tap
 brew tap homebrew/cask-drivers
+brew tap go-task/tap
 
 brew update
 brew upgrade
@@ -20,14 +21,17 @@ apps=(
   bazelisk
   buildifier
   clang-format
+  cmake
   cubbit
+  diff-so-fancy
   dockutil
   gh
   git-lfs
-  go-task/tap/go-task
+  go-task
   gpg
   ffmpeg
   fzf
+  helm
   hub
   kubectl
   kubectx
@@ -43,6 +47,7 @@ apps=(
   tree
   vim
   youtube-dl
+  yq
   wget
   windmilleng/tap/tilt
   z

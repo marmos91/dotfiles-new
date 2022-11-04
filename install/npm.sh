@@ -24,8 +24,10 @@ nvm install 12
 
 packages=(
   commitizen
+  node-cmake
   npm-check
   ts-node
+  yarn
 )
 
 npm install -g "${packages[@]}"

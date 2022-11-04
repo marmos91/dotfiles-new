@@ -7,18 +7,20 @@ fi
 
 apps=(
   1password
-  authy
+  # authy # It has a bug
   bartender
   bettertouchtool
   cubbit
   docker
+  dropbox
   epic-games
   flux
-  google-chrome
+  # google-chrome
+  gdrive
   gpg-suite
   handbrake
   istat-menus
-  iterm2
+  # iterm2
   # jdownloader
   logitech-options
   nordvpn
@@ -28,6 +30,7 @@ apps=(
   tableplus
   # telegram
   the-unarchiver
+  teamviewer
   transmission
   tripmode
   visual-studio-code
