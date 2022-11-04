@@ -17,6 +17,7 @@ brew update
 brew upgrade
 
 apps=(
+  adobe-creative-cloud
   awscli
   bazelisk
   buildifier
