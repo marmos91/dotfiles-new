@@ -29,6 +29,7 @@ apps=(
   dockutil
   gh
   git-lfs
+  golang
   go-task
   gpg
   ffmpeg
