@@ -12,6 +12,7 @@ brew tap windmilleng/tap
 brew tap cubbit/tap
 brew tap homebrew/cask-drivers
 brew tap go-task/tap
+brew tap bazelbuild/tap
 
 brew update
 brew upgrade
@@ -20,6 +21,7 @@ apps=(
   adobe-creative-cloud
   awscli
   bat
+  bazelbuild/tap/ibazel
   bazelisk
   buildifier
   clang-format
