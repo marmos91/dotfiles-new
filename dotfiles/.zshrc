@@ -68,6 +68,11 @@ _fzf_complete_git_post() {
     awk '{print $1}'
 }
 
+# Path related stuff
+
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
 # Node/NVM related stuff
 export NVM_DIR="/Users/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
