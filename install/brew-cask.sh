@@ -24,6 +24,7 @@ apps=(
   # jdownloader
   logitech-options
   nordvpn
+  obs
   postman
   slack
   spotify
