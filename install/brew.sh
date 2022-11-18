@@ -47,6 +47,7 @@ apps=(
   ninja
   python
   python3
+  rclone
   thefuck
   tig
   tmux
