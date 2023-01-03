@@ -6,6 +6,10 @@ fi
 if ! is-executable brew; then
   echo "Brew is missing. Installing it"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
 fi
 
 brew tap windmilleng/tap
@@ -21,12 +25,11 @@ apps=(
   adobe-creative-cloud
   awscli
   bat
-  bazelbuild/tap/ibazel
+  ibazel
   bazelisk
   buildifier
   clang-format
   cmake
-  cubbit
   diff-so-fancy
   dockutil
   gh
