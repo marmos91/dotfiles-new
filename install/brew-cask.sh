@@ -10,6 +10,7 @@ apps=(
   authy
   bartender
   bettertouchtool
+  cleanmymac
   cubbit
   docker
   dropbox

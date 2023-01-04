@@ -87,5 +87,10 @@ log "[12/12] Installing Tmux related stuff"
 . "$DOTFILES_DIR/install/tmux.sh"
 log "[✓] Tmux installed"
 
+log "[13/12] Installing coder related script"
+. "$DOTFILES_DIR/install/coder.sh"
+log "[✓] Coder installed"
+
+
 log "[✓] Dotfiles installed: run the following command to load the new configuration"
 echo "source ~/.zshrc"
