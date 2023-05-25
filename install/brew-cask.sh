@@ -35,7 +35,7 @@ apps=(
   teamviewer
   # transmission
   tripmode
-  visual-studio-code
+  visual-studio-code-insiders
   vlc
   whatsapp
   zoom 
