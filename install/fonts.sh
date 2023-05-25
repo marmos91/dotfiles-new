@@ -7,12 +7,7 @@ brew tap homebrew/cask-fonts
 
 fonts=(
   font-fira-code
+  font-jetbrains-mono-nerd-font
 )
-
-git clone https://github.com/powerline/fonts.git "$DOTFILES_DIR/fonts/powerline" --depth=1
-$DOTFILES_DIR/fonts/powerline/install.sh
-rm -rf $DOTFILES_DIR/fonts/powerline
-
-cp "$DOTFILES_DIR/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf" ~/Library/Fonts
 
 brew install --cask "${fonts[@]}"
