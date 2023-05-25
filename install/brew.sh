@@ -46,6 +46,7 @@ apps=(
   jq
   k9s
   lf
+  luarocks
   mas
   ninja
   python
