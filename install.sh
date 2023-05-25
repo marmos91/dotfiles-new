@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Author: Marco Moschettini
-# Version: 2.0.0
+# Version: 2.1.0
 
 function log
 {
@@ -79,9 +79,9 @@ log "[10/12] Setting up dotfiles"
 . "$DOTFILES_DIR/install/dotfiles.sh"
 log "[✓] Dotfiles set"
 
-log "[11/12] Installing Vim related stuff"
-. "$DOTFILES_DIR/install/vim.sh"
-log "[✓] Vim installed"
+log "[11/12] Installing NeoVim related stuff"
+. "$DOTFILES_DIR/install/nvim.sh"
+log "[✓] NeoVim installed"
 
 log "[12/12] Installing Tmux related stuff"
 . "$DOTFILES_DIR/install/tmux.sh"
