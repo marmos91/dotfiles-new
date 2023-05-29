@@ -14,3 +14,4 @@ ln -sfv ~/.dotfiles/.vimrc ~
 ln -sfv ~/.dotfiles/.tmux.conf ~
 ln -sfv ~/.dotfiles/.gitconfig ~
 ln -sfv ~/.dotfiles/.gitignore_global ~ln -sfv ~/.dotfiles/.vale.ini ~
+ln -sfv ~/.dotfiles/.vale.ini ~
