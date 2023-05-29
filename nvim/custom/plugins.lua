@@ -1,6 +1,17 @@
+local overrides = require("custom.configs.overrides")
+
+---@type NvPluginSpec[]
 local plugins = {
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      {
+        "jose-elias-alvarez/null-ls.nvim",
+        config = function()
+          require "custom.configs.null-ls"
+        end,
+      },
+    },
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
@@ -8,12 +19,15 @@ local plugins = {
   },
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "rust-analyzer",
-        "gopls",
-      }
-    }
+    opts = overrides.mason
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = overrides.treesitter,
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = overrides.nvimtree,
   },
   {
     "rust-lang/rust.vim",
@@ -26,12 +40,6 @@ local plugins = {
     "simrat39/rust-tools.nvim",
     ft = "rust",
     dependencies = "neovim/nvim-lspconfig",
-    opts = function ()
-      return require "custom.configs.rust-tools"
-    end,
-    config = function(_, opts)
-      require('rust-tools').setup(opts)
-    end
   },
   {
     "saecki/crates.nvim",
@@ -44,11 +52,6 @@ local plugins = {
   },
   {
     "hrsh7th/nvim-cmp",
-    opts = function ()
-      local M = require "plugins.configs.cmp"
-      table.insert(M.sources, {name = "crates"})
-      return M
-    end,
   }
 }
 
