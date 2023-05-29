@@ -45,6 +45,7 @@ apps=(
   kubectx
   jq
   k9s
+  lazygit
   lf
   luarocks
   mas
