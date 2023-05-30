@@ -1,5 +1,6 @@
 # Git stuff
 alias git=hub
+alias vim=nvim
 
 npkill() {
     find "$@" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
