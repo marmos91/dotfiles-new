@@ -7,7 +7,7 @@ fi
 
 # Environment
 export DOTFILES_DIR="$HOME/.dotfiles"
-. "$DOTFILES_DIR"/.env
+. "$HOME/.env"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -36,13 +36,13 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Aliases
-source ~/.dotfiles/.alias
+source ~/.alias
 
 # Load Z environment
 . $(brew --prefix)/etc/profile.d/z.sh
 
 # Preferred editor
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -67,11 +67,6 @@ _fzf_complete_git() {
 _fzf_complete_git_post() {
     awk '{print $1}'
 }
-
-# Path related stuff
-
-export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
 
 # Node/NVM related stuff
 export NVM_DIR="/Users/$USER/.nvm"

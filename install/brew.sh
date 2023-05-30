@@ -49,6 +49,7 @@ apps=(
   lf
   luarocks
   mas
+  neovim
   ninja
   python
   python3
@@ -56,8 +57,8 @@ apps=(
   thefuck
   tig
   tmux
-  tree
-  vim
+  tree 
+  vale
   youtube-dl
   yq
   wget
