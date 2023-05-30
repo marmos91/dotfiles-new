@@ -8,7 +8,6 @@
 
 [core]
 	excludesfile = /Users/marcomoschettini/.gitignore_global
-  editor = vim
   editor = nvim
   filemode = false
   trustctime = false
@@ -19,4 +18,6 @@
 [pull]
 	rebase = true
 [fetch]
-	prune = true
+  prune = true
+[push]
+  autoSetupRemote = true
