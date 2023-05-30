@@ -30,6 +30,14 @@ local plugins = {
     opts = overrides.nvimtree,
   },
   {
+    "nvim-lua/plenary.nvim",
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    lazy = false,
+  },
+  {
     "rust-lang/rust.vim",
     ft = "rust",
     init = function ()
