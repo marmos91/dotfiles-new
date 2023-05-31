@@ -88,7 +88,7 @@
 
 # mailcount.sh {
 	# Mailbox type to use. Can be any of {apple_mail, gmail, maildir, mbox, mailcheck}
-	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILBOX_TYPE=""
+	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILBOX_TYPE="apple_mail"
 	
 	## Gmail
 	# Enter your Gmail username here WITH OUT @gmail.com.( OR @domain)
@@ -190,6 +190,6 @@
 	export TMUX_POWERLINE_SEG_WEATHER_JSON="jq"
 	# Your location
 	# Latitude and Longtitude for use with yr.no
-	TMUX_POWERLINE_SEG_WEATHER_LAT=""
-	TMUX_POWERLINE_SEG_WEATHER_LON=""
+	TMUX_POWERLINE_SEG_WEATHER_LAT="47.3769"
+	TMUX_POWERLINE_SEG_WEATHER_LON="8.5417"
 # }
