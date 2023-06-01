@@ -18,6 +18,10 @@ local plugins = {
     end,
   },
   {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+  {
     "williamboman/mason.nvim",
     opts = overrides.mason
   },
