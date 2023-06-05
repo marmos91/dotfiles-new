@@ -22,6 +22,14 @@ local plugins = {
     lazy = false,
   },
   {
+    "ThePrimeagen/vim-be-good",
+    lazy = false,
+  },
+  {
+    "derektata/lorem.nvim",
+    lazy = false,
+  },
+  {
     "williamboman/mason.nvim",
     opts = overrides.mason
   },
@@ -32,9 +40,6 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
-  },
-  {
-    "nvim-lua/plenary.nvim",
   },
   {
     "kdheepak/lazygit.nvim",
