@@ -16,22 +16,23 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
-    "vale"
   }
 }
 
 M.treesitter = {
   ensure_installed = {
+    "cpp",
+    "dockerfile",
     "vim",
     "lua",
     "html",
     "css",
+    "go",
     "javascript",
     "typescript",
     "tsx",
     "rust",
     "markdown",
-    "markdown_inline"
   },
   indent = {
     enable = true,
@@ -40,6 +41,10 @@ M.treesitter = {
 
 -- git support in nvimtree
 M.nvimtree = {
+  filters = {
+    dotfiles = true,
+    custom = { "node_modules" },
+  },
   git = {
     enable = true,
   },
@@ -51,6 +56,10 @@ M.nvimtree = {
       }
     }
   }
+}
+
+M.telescope = {
+  extensions = {"media_files"}
 }
 
 return M

@@ -32,6 +32,7 @@ apps=(
   cmake
   diff-so-fancy
   dockutil
+  fd
   gh
   git-lfs
   golang
@@ -53,6 +54,7 @@ apps=(
   ninja
   python
   python3
+  ripgrep
   rclone
   thefuck
   tig
