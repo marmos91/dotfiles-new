@@ -87,11 +87,7 @@ log "[12/12] Installing Tmux related stuff"
 . "$DOTFILES_DIR/install/tmux.sh"
 log "[✓] Tmux installed"
 
-log "[13/12] Installing Vale related stuff"
-. "$DOTFILES_DIR/install/vale.sh"
-log "[✓] Vale installed"
-
-log "[14/12] Installing coder related script"
+log "[13/12] Installing coder related script"
 . "$DOTFILES_DIR/install/coder.sh"
 log "[✓] Coder installed"
 

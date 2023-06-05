@@ -13,10 +13,6 @@ local sources = {
 
   -- Lua
   b.formatting.stylua,
-
-  -- linter
-  b.diagnostics.vale,
-
 }
 
 null_ls.setup {
