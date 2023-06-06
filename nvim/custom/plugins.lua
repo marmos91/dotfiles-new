@@ -30,6 +30,11 @@ local plugins = {
 		lazy = false,
 	},
 	{
+		"bazelbuild/vim-bazel",
+		dependencies = "google/vim-maktaba",
+		lazy = false,
+	},
+	{
 		"williamboman/mason.nvim",
 		opts = overrides.mason,
 	},
