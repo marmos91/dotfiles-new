@@ -24,25 +24,32 @@ local sources = {
 			"html",
 			"markdown",
 			"css",
-            "scss"
+			"scss",
 		},
 	}),
 	builtins.formatting.fixjson,
 	builtins.formatting.stylua,
-    builtins.formatting.shfmt,
-    custom_formatters.prettier_eslint.with({
-        filetypes = {"typescript", "typescriptreact", "javascript", 'javascriptreact'}
-    }),
-    custom_formatters.prettier_eslint_json,
+	builtins.formatting.shfmt,
+	custom_formatters.prettier_eslint.with({
+		filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+	}),
+	custom_formatters.prettier_eslint_json,
 
 	-- diagnostics
 	builtins.diagnostics.eslint_d.with({
 		diagnostics_format = "[eslint] #{m}\n(#{c})",
 	}),
-    builtins.diagnostics.shellcheck,
+	builtins.diagnostics.shellcheck,
+	builtins.diagnostics.markdownlint,
+	builtins.diagnostics.buildifier,
+	builtins.diagnostics.commitlint,
+	builtins.diagnostics.editorconfig_checker,
+	builtins.diagnostics.luacheck,
+	builtins.diagnostics.sqlfluff,
 
-    -- code actions
-    builtins.code_actions.shellcheck,
+	-- code actions
+	builtins.code_actions.shellcheck,
+	builtins.code_actions.eslint_d,
 }
 
 null_ls.setup({
