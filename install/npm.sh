@@ -26,6 +26,7 @@ packages=(
   commitizen
   node-cmake
   npm-check
+  prettier-eslint-cli
   ts-node
   yarn
 )
