@@ -24,6 +24,8 @@ nvm install 16
 
 packages=(
   commitizen
+  @commitlint/{config-conventional,cli} 
+  commitlint-format-json
   node-cmake
   npm-check
   prettier-eslint-cli

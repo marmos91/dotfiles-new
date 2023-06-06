@@ -29,9 +29,11 @@ apps=(
   bazelisk
   buildifier
   clang-format
+  commitlint
   cmake
   diff-so-fancy
   dockutil
+  editorconfig-checker
   fd
   gh
   git-lfs
