@@ -13,11 +13,10 @@ M.mason = {
 		"gopls",
 		"markdownlint",
 
-        -- webdev stuff
+		-- webdev stuff
 		"css-lsp",
-        "eslint-lsp",
+		"eslint_d",
 		"html-lsp",
-        "prettier",
 		"typescript-language-server",
 	},
 }
@@ -34,15 +33,15 @@ M.treesitter = {
 		"javascript",
 		"typescript",
 		"tsx",
-        "toml",
-        "json",
+		"toml",
+		"json",
 		"rust",
 		"markdown",
-        "markdown_inline",
+		"markdown_inline",
 	},
-    autotag = {
-        enable = true
-    },
+	autotag = {
+		enable = true,
+	},
 	indent = {
 		enable = true,
 	},
