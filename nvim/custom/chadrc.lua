@@ -6,6 +6,9 @@ M.ui = {
 	statusline = {
 		theme = "vscode",
 	},
+	nvdash = {
+		load_on_startup = true,
+	},
 }
 
 M.plugins = "custom.plugins"
