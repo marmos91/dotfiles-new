@@ -51,6 +51,7 @@ apps=(
   lazygit
   lf
   luarocks
+  luacheck
   mas
   neovim
   ninja
