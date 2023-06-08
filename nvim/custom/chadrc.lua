@@ -6,6 +6,17 @@ M.ui = {
 	statusline = {
 		theme = "vscode",
 	},
+	hl_override = {
+		NvDashAscii = {
+			fg = "blue",
+			bg = "none",
+		},
+
+		NvDashButtons = {
+			fg = "light_grey",
+			bg = "none",
+		},
+	},
 	nvdash = {
 		load_on_startup = true,
 	},
