@@ -42,6 +42,9 @@ local plugins = {
 		"nvim-telescope/telescope.nvim",
 		dependencies = "nvim-lua/plenary.nvim",
 		opts = overrides.telescope,
+		config = function()
+			require("telescope").load_extension("lazygit")
+		end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -52,12 +55,11 @@ local plugins = {
 		opts = overrides.nvimtree,
 	},
 	{
-		"nvim-tree/nvim-tree.lua",
-		opts = overrides.nvimtree,
-	},
-	{
 		"kdheepak/lazygit.nvim",
-		dependencies = "nvim-lua/plenary.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
 		lazy = false,
 	},
 	{
