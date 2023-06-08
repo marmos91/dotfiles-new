@@ -14,7 +14,6 @@ local lsp_formatting = function(buffer)
 end
 
 local builtins = null_ls.builtins
-local custom_formatters = require("custom.formatters")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
 
 local sources = {
@@ -27,29 +26,58 @@ local sources = {
 			"scss",
 		},
 	}),
-	builtins.formatting.fixjson,
 	builtins.formatting.stylua,
 	builtins.formatting.shfmt,
-	custom_formatters.prettier_eslint.with({
-		filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+	builtins.formatting.dprint.with({
+		filetypes = {
+			"typescript",
+			"javascript",
+			"json",
+		},
 	}),
-	custom_formatters.prettier_eslint_json,
 
 	-- diagnostics
-	builtins.diagnostics.eslint_d.with({
-		diagnostics_format = "[eslint] #{m}\n(#{c})",
-	}),
 	builtins.diagnostics.shellcheck,
 	builtins.diagnostics.markdownlint,
 	builtins.diagnostics.buildifier,
 	builtins.diagnostics.commitlint,
 	builtins.diagnostics.editorconfig_checker,
-	builtins.diagnostics.luacheck,
-	builtins.diagnostics.sqlfluff,
+	builtins.diagnostics.luacheck.with({
+		extra_args = { "--globals", "vim" },
+	}),
+	builtins.diagnostics.eslint.with({
+		diagnostics_format = "[eslint] #{m}\n(#{c})",
+		condition = function(utils)
+			return utils.root_has_file({
+				".eslintrc",
+				".eslintrc.js",
+				".eslintrc.cjs",
+				".eslintrc.yaml",
+				".eslintrc.yml",
+				".eslintrc.json",
+			})
+		end,
+	}),
 
 	-- code actions
 	builtins.code_actions.shellcheck,
-	builtins.code_actions.eslint_d,
+	builtins.code_actions.eslint.with({
+		diagnostics_format = "[eslint] #{m}\n(#{c})",
+		condition = function(utils)
+			return utils.root_has_file({
+				".eslintrc",
+				".eslintrc.js",
+				".eslintrc.cjs",
+				".eslintrc.yaml",
+				".eslintrc.yml",
+				".eslintrc.json",
+			})
+		end,
+	}),
+
+	-- completion
+	builtins.completion.luasnip,
+	builtins.completion.tags,
 }
 
 null_ls.setup({

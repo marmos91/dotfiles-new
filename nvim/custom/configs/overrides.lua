@@ -12,10 +12,11 @@ M.mason = {
 		"rust-analyzer",
 		"gopls",
 		"markdownlint",
+		"dprint",
 
 		-- webdev stuff
 		"css-lsp",
-		"eslint_d",
+		"eslint-lsp",
 		"html-lsp",
 		"typescript-language-server",
 	},
@@ -50,8 +51,7 @@ M.treesitter = {
 -- git support in nvimtree
 M.nvimtree = {
 	filters = {
-		dotfiles = true,
-		custom = { "node_modules" },
+		custom = { "node_modules", ".git" },
 	},
 	git = {
 		enable = true,
@@ -67,7 +67,14 @@ M.nvimtree = {
 }
 
 M.telescope = {
-	extensions = { "media_files" },
+	pickers = {
+		find_files = {
+			hidden = true,
+		},
+	},
+	defaults = {
+		file_ignore_patterns = { ".git", "node_modules" },
+	},
 }
 
 return M

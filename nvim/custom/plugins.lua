@@ -39,8 +39,17 @@ local plugins = {
 		opts = overrides.mason,
 	},
 	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = "nvim-lua/plenary.nvim",
+		opts = overrides.telescope,
+	},
+	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = overrides.treesitter,
+	},
+	{
+		"nvim-tree/nvim-tree.lua",
+		opts = overrides.nvimtree,
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
