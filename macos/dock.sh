@@ -1,8 +1,8 @@
 #!/bin/sh
 
 if ! is-macos; then
-  echo "Skipped: OSX dock"
-  return
+	echo "Skipped: OSX dock"
+	return
 fi
 
 dockutil --no-restart --remove all

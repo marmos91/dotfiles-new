@@ -1,44 +1,44 @@
 if ! is-macos -o ! is-executable brew; then
-  echo "Skipped: Homebrew-Cask"
-  return
+	echo "Skipped: Homebrew-Cask"
+	return
 fi
 
 # Install packages
 
 apps=(
-  1password
-  authy
-  bartender
-  bettertouchtool
-  cleanmymac
-  cubbit
-  docker
-  dropbox
-  epic-games
-  flux
-  # google-chrome
-  # gdrive
-  gpg-suite
-  handbrake
-  istat-menus
-  iterm2
-  # jdownloader
-  logitech-options
-  nordvpn
-  obs
-  postman
-  slack
-  spotify
-  tableplus
-  # telegram
-  the-unarchiver
-  teamviewer
-  # transmission
-  tripmode
-  visual-studio-code-insiders
-  vlc
-  whatsapp
-  zoom 
+	1password
+	authy
+	bartender
+	bettertouchtool
+	cleanmymac
+	cubbit
+	docker
+	dropbox
+	epic-games
+	flux
+	# google-chrome
+	# gdrive
+	gpg-suite
+	handbrake
+	istat-menus
+	iterm2
+	# jdownloader
+	logitech-options
+	nordvpn
+	obs
+	postman
+	slack
+	spotify
+	tableplus
+	# telegram
+	the-unarchiver
+	teamviewer
+	# transmission
+	tripmode
+	visual-studio-code-insiders
+	vlc
+	whatsapp
+	zoom
 )
 
 brew install --cask "${apps[@]}"

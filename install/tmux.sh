@@ -1,6 +1,6 @@
 if ! is-macos -o ! is-executable brew; then
-  echo "Skipped: Vim"
-  return
+	echo "Skipped: Vim"
+	return
 fi
 
 mkdir -p ~/.tmux/plugins

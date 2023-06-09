@@ -1,13 +1,13 @@
 if ! is-macos -o ! is-executable brew; then
-  echo "Skipped: Homebrew-Cask"
-  return
+	echo "Skipped: Homebrew-Cask"
+	return
 fi
 
 brew tap homebrew/cask-fonts
 
 fonts=(
-  font-fira-code
-  font-jetbrains-mono-nerd-font
+	font-fira-code
+	font-jetbrains-mono-nerd-font
 )
 
 brew install --cask "${fonts[@]}"

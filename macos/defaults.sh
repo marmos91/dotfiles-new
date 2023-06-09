@@ -1,6 +1,6 @@
 if ! is-macos; then
-  echo "Skipped: OSX defaults"
-  return
+	echo "Skipped: OSX defaults"
+	return
 fi
 
 osascript -e 'tell application "System Preferences" to quit'
@@ -9,7 +9,11 @@ osascript -e 'tell application "System Preferences" to quit'
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do
+	sudo -n true
+	sleep 60
+	kill -0 "$$" || exit
+done 2>/dev/null &
 
 echo "Setting up defaults for General UI/UX"
 ###############################################################################
@@ -323,5 +327,5 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
 echo "Killing affected applications"
 for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal" "SystemUIServer"; do
-  killall "${app}" &> /dev/null
+	killall "${app}" &>/dev/null
 done

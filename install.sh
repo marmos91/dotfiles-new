@@ -3,21 +3,19 @@
 # Author: Marco Moschettini
 # Version: 2.1.0
 
-function log
-{
-    echo "${BLUE}${UNDERLINE}$1${RESET}" 
+function log {
+	echo "${BLUE}${UNDERLINE}$1${RESET}"
 }
 
-function titlize
-{
+function titlize {
 	echo "${YELLOW}$1${RESET}"
 }
 
 ######## COLORS ########
-YELLOW=`tput setaf 3`
-BLUE=`tput setaf 4`
-UNDERLINE=`tput smul`
-RESET=`tput sgr0`
+YELLOW=$(tput setaf 3)
+BLUE=$(tput setaf 4)
+UNDERLINE=$(tput smul)
+RESET=$(tput sgr0)
 ######## END COLORS ########
 
 titlize "
@@ -30,7 +28,7 @@ titlize "
                                                                                                                                                                  
 "
 
-export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export COMPUTER_NAME="Marco's MBP"
 
 log "Dotfiles launched from $DOTFILES_DIR"
