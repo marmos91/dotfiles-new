@@ -28,6 +28,7 @@ apps=(
 	ibazel
 	bazelisk
 	buildifier
+	btop
 	clang-format
 	commitlint
 	code-minimap
