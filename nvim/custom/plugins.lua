@@ -42,6 +42,12 @@ local plugins = {
 		opts = overrides.mason,
 	},
 	{
+		"kylechui/nvim-surround",
+		version = "*",
+		event = "VeryLazy",
+		opts = overrides.nvim_surround,
+	},
+	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = "nvim-lua/plenary.nvim",
 		opts = overrides.telescope,

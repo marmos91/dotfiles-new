@@ -68,6 +68,8 @@ M.nvimtree = {
 	},
 }
 
+M.nvim_surround = {}
+
 M.telescope = {
 	pickers = {
 		find_files = {
