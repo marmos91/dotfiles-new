@@ -56,6 +56,7 @@ apps=(
 	luacheck
 	mas
 	neovim
+	neofetch
 	ninja
 	python
 	python3
@@ -64,6 +65,7 @@ apps=(
 	thefuck
 	tig
 	tmux
+	tldr
 	tree
 	vale
 	youtube-dl
