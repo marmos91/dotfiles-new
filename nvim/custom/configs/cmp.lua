@@ -13,18 +13,7 @@ local function deprioritize_snippet(entry1, entry2)
 	end
 end
 
--- prioritize fields entries over other lsp completions
-local function prioritize_field(entry1, entry2)
-	if entry1:get_kind() == types.lsp.CompletionItemKind.Field then
-		return true
-	end
-	if entry2:get_kind() == types.lsp.CompletionItemKind.Field then
-		return false
-	end
-end
-
 M.comparators = {
-	prioritize_field,
 	deprioritize_snippet,
 	cmp.config.compare.offset,
 	cmp.config.compare.exact,
