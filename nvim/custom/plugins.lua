@@ -51,6 +51,14 @@ local plugins = {
 		"nvim-telescope/telescope.nvim",
 		dependencies = "nvim-lua/plenary.nvim",
 		opts = overrides.telescope,
+		config = function(_, opts)
+			require("telescope").setup(opts)
+			require("telescope").load_extension("media_files")
+		end,
+	},
+	{
+		"nvim-telescope/telescope-media-files.nvim",
+		dependencies = "nvim-telescope/telescope.nvim",
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -58,6 +66,8 @@ local plugins = {
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
 		opts = overrides.nvimtree,
 	},
 	{
@@ -67,6 +77,13 @@ local plugins = {
 			"nvim-telescope/telescope.nvim",
 		},
 		lazy = false,
+	},
+	{
+		"apzelos/blamer.nvim",
+		lazy = false,
+		init = function(_)
+			vim.g.blamer_enabled = 1
+		end,
 	},
 	{
 		"hrsh7th/nvim-cmp",

@@ -25,8 +25,15 @@ M.general = {
 		["<A-k>"] = { "<Esc>:m .-2<CR>==gi", "move line up" },
 	},
 	v = {
+		-- move a line up/down
 		["<S-j>"] = { ":m '>+1<CR>gv=gv" },
 		["<S-k>"] = { ":m '<-2<CR>gv=gv" },
+	},
+}
+
+M.telescope = {
+	n = {
+		["<leader>fd"] = { "<cmd> Telescope media_files<CR>", "Find media files" },
 	},
 }
 
