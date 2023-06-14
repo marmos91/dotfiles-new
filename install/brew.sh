@@ -29,6 +29,7 @@ apps=(
 	bazelisk
 	buildifier
 	btop
+	chafa
 	clang-format
 	commitlint
 	code-minimap
@@ -73,6 +74,7 @@ apps=(
 	wget
 	windmilleng/tap/tilt
 	z
+	zsh-syntax-highlighting
 )
 
 $(brew --prefix)/opt/fzf/install --completion --key-bindings

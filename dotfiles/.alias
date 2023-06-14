@@ -1,8 +1,8 @@
-# Git stuff
 alias git=hub
 alias vim=nvim
 alias gg=lazygit
 alias top=btop
+alias python="python3"
 
 npkill() {
     find "$@" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
@@ -10,4 +10,16 @@ npkill() {
 
 ffind() {
     find "$@" | fzf
+}
+
+addToPath() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$PATH:$1
+    fi
+}
+
+addToPathFront() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
 }
