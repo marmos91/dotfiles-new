@@ -1,9 +1,3 @@
-[submodule "dotfiles/.tmux/tpm"]
-	path = dotfiles/.tmux/tpm
-	url = https://github.com/tmux-plugins/tpm
-[submodule "alacritty/catpuccin"]
-	path = alacritty/catpuccin
-	url = https://github.com/catppuccin/alacritty.git
 [submodule "iterm/catpuccin"]
 	path = iterm/catpuccin
 	url = https://github.com/catppuccin/iterm.git
