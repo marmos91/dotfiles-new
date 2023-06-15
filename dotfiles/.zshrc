@@ -5,11 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Run Tmux automatically
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
-
 # Aliases
 source ~/.alias
 
@@ -31,15 +26,11 @@ plugins=(
     aws
     bazel
     brew
-    docker
     gh
     git
-    helm
-    kubectl
     fzf
     npm
     nvm
-    poetry
     tmux
     zsh-autosuggestions
     zsh-interactive-cd
