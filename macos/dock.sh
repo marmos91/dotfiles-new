@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 if ! is-macos; then
 	echo "Skipped: OSX dock"
@@ -14,11 +14,10 @@ dockutil --no-restart --add --replacing "/Applications/Telegram.app"
 dockutil --no-restart --add --replacing "/Applications/Slack.app"
 dockutil --no-restart --add --replacing "/Applications/Spotify.app"
 dockutil --no-restart --add --replacing "/Applications/iTerm.app"
-dockutil --no-restart --add --replacing "/Applications/Visual Studio Code.app"
 
 defaults write com.apple.dock show-recents -bool FALSE
 
 dockutil --add '/Applications' --view grid --display folder --allhomes
-dockutil --add '~/Downloads' --view grid --display folder --allhomes
+dockutil --add "$HOME/Downloads" --view grid --display folder --allhomes
 
 killall Dock
