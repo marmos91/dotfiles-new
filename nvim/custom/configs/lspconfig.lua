@@ -3,7 +3,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require("lspconfig")
 
-local servers = { "html", "cssls", "gopls", "tsserver" }
+local servers = { "html", "cssls", "gopls", "bashls" }
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
@@ -11,3 +11,11 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+lspconfig.tsserver.setup({
+	on_attach = function(client)
+		-- Temporary disabling this due to a bug with tsserver indentation
+		-- disable formatting for tsserver
+		client.server_capabilities.documentFormattingProvider = false
+	end,
+})

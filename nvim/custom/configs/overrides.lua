@@ -8,6 +8,9 @@ M.mason = {
 
 		-- other stuff
 		"bash-language-server",
+		"beautysh",
+		"shellcheck",
+		"shellfmt",
 		"pylint",
 		"rust-analyzer",
 		"gopls",
@@ -26,11 +29,7 @@ M.mason = {
 
 M.treesitter = {
 	ensure_installed = {
-		"cpp",
-		"dockerfile",
-		"vim",
 		"lua",
-		"html",
 		"css",
 		"go",
 		"javascript",
@@ -45,9 +44,10 @@ M.treesitter = {
 	autotag = {
 		enable = true,
 	},
-	indent = {
-		enable = true,
-	},
+	-- Temporary disabling this due to a bug with tsserver indentation
+	-- indent = {
+	-- 	enable = true,
+	-- },
 }
 
 -- git support in nvimtree

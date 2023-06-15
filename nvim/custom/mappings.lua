@@ -34,6 +34,8 @@ M.general = {
 M.telescope = {
 	n = {
 		["<leader>fd"] = { "<cmd> Telescope media_files<CR>", "Find media files" },
+		["<leader>fg"] = { "<cmd> Telescope git_files<CR>", "Find git files" },
+		["<leader>fc"] = { "<cmd> Telescope commands<CR>", "Find vim commands" },
 	},
 }
 

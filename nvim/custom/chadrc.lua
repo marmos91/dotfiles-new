@@ -3,9 +3,9 @@ local M = {}
 
 M.ui = {
 	theme = "catppuccin",
-	statusline = {
-		theme = "vscode",
-	},
+	-- statusline = {
+	-- 	theme = "vscode",
+	-- },
 	hl_override = {
 		NvDashAscii = {
 			fg = "blue",
