@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if ! is-macos -o ! is-executable brew; then
 	echo "Skipped: Homebrew-Cask"
 	return
@@ -16,13 +18,11 @@ apps=(
 	dropbox
 	epic-games
 	flux
-	# google-chrome
-	# gdrive
+	google-chrome
 	gpg-suite
 	handbrake
 	istat-menus
 	iterm2
-	# jdownloader
 	logitech-options
 	karabiner-elements
 	nordvpn
@@ -34,9 +34,9 @@ apps=(
 	# telegram
 	the-unarchiver
 	teamviewer
-	# transmission
+	transmission
 	tripmode
-	visual-studio-code-insiders
+	visual-studio-code
 	vlc
 	whatsapp
 	zoom

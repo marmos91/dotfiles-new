@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if ! is-macos; then
 	echo "Skipped: Karabiner-elements"
 	return

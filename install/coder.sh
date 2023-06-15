@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if ! is-macos -o ! is-executable curl -o; then
 	echo "Cannot install coder related script"
 	return

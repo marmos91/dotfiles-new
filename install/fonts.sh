@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if ! is-macos -o ! is-executable brew; then
 	echo "Skipped: Homebrew-Cask"
 	return

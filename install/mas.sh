@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if ! is-macos -o ! is-executable brew; then
 	echo "Skipped: Mac app store"
 	return
