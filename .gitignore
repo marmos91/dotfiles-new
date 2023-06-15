@@ -81,3 +81,6 @@ $RECYCLE.BIN/
 
 # private binaries
 bin/backup
+
+# backups
+karabiner/automatic_backups
