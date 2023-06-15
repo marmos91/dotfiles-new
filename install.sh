@@ -29,7 +29,7 @@ titlize "
 "
 
 export DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-export COMPUTER_NAME="Marco's MBP"
+export COMPUTER_NAME="nyarlathotep"
 
 log "Dotfiles launched from $DOTFILES_DIR"
 
