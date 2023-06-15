@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-[ -f "~$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
+[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 
 export FZF_DEFAULT_OPTS='--no-height --no-reverse'
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
@@ -13,7 +13,7 @@ _fzf_complete_git() {
 	branches=$(git branch -vv --all)
 	if [[ $ARGS == 'git checkout'* ]]; then
 		_fzf_complete --reverse --multi -- "$@" < <(
-			echo $branches
+			echo "$branches"
 		)
 	else
 		eval "zle ${fzf_default_completion:-expand-or-complete}"

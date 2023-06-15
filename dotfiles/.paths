@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 
 # System stuff
-addToPath $HOME/bin
+addToPath "$HOME/bin"
 addToPath /usr/local/bin
 addToPath /usr/local/sbin
-addToPath $HOME/.local/bin
+addToPath "$HOME/.local/bin"
 
 # Custom commands
-addToPath $DOTFILES_DIR/bin
+addToPath "$DOTFILES_DIR/bin"
 
 # Python stuff
-addToPath $HOME/.poetry
+addToPath "$HOME/.poetry"
 
 # Go stuff
 addToPath /usr/local/go/bin
-addToPath $GOPATH/bin
+addToPath "$GOPATH/bin"
 
 # Rust stuff
-addToPath $HOME/.cargo/bin
-addToPath $HOME/.rustup
+addToPath "$HOME/.cargo/bin"
+addToPath "$HOME/.rustup"
