@@ -27,7 +27,6 @@ plugins=(
     bazel
     brew
     gh
-    git
     fzf
     npm
     nvm
