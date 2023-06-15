@@ -24,6 +24,7 @@ apps=(
 	iterm2
 	# jdownloader
 	logitech-options
+	karabiner-elements
 	nordvpn
 	obs
 	postman

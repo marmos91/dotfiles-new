@@ -5,5 +5,5 @@ fi
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
-rm -rf ~/.config/nvim/lua/custom
-ln -sfv "$DOTFILES_DIR/nvim/custom" ~/.config/nvim/lua/custom
+rm -rf "$HOME/.config/nvim/lua/custom"
+ln -sfv "$DOTFILES_DIR/nvim/custom" "$HOME/.config/nvim/lua/custom"
