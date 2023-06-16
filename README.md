@@ -38,12 +38,12 @@ You are free to modify my configuration to suit your needs.
 
 Here is a list of places to start:
 
-- `[install/brew-cask.sh](./install/brew-cask.sh)`: contains all the applications
-- `[install/brew.sh](./install/brew.sh)`: contains all the command line utilities
-- `[install/fonts.sh](./install/fonts.sh)`: contains all the custom fonts
-- `[install/mas.sh](./install/mas.sh)`: contains all the Mac App Store applications
-- `[install/npm.sh](./install/npm.sh)`: contains all the node command line utilities
-- `[install/zsh.sh](./install/zsh.sh)`: contains the list of all the zsh plugins
+- [`install/brew-cask.sh`](./install/brew-cask.sh): contains all the applications
+- [`install/brew.sh`](./install/brew.sh): contains all the command line utilities
+- [`install/fonts.sh`](./install/fonts.sh): contains all the custom fonts
+- [`install/mas.sh`](./install/mas.sh): contains all the Mac App Store applications
+- [`install/npm.sh`](./install/npm.sh): contains all the node command line utilities
+- [`install/zsh.sh`](./install/zsh.sh): contains the list of all the zsh plugins
 
 The config folder contains all the configurations of the applications we are going to install.
 The most interesting path is definitely `config/nvim/lua/custom` where you can find my configuration for _neovim_.
