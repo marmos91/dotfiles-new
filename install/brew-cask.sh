@@ -23,6 +23,7 @@ apps=(
 	handbrake
 	istat-menus
 	iterm2
+	kitty
 	logitech-options
 	karabiner-elements
 	nordvpn

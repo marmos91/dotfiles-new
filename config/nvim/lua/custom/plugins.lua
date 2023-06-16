@@ -42,6 +42,10 @@ local plugins = {
 		opts = overrides.mason,
 	},
 	{
+		"fladson/vim-kitty",
+		lazy = false,
+	},
+	{
 		"kylechui/nvim-surround",
 		version = "*",
 		event = "VeryLazy",
