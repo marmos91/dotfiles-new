@@ -84,6 +84,7 @@ $RECYCLE.BIN/
 
 # private binaries
 bin/backup
+*.bak
 
 # private configurations
 config/gh/hosts.yml

@@ -90,9 +90,9 @@ log "[13/14] Installing coder related script"
 . "$DOTFILES_DIR/install/coder.sh"
 log "[✓] Coder installed"
 
-log "[14/14] Installing Karabiner related script"
-. "$DOTFILES_DIR/install/karabiner.sh"
-log "[✓] Karabiner installed"
+log "[14/14] Installing Kitty related script"
+. "$DOTFILES_DIR/install/kitty.sh"
+log "[✓] Kitty installed"
 
 log "[✓] Dotfiles installed: run the following command to load the new configuration"
 echo "source ~/.zshrc"
