@@ -17,8 +17,8 @@ Personal dotfiles repository.
 First of all clone this repository
 
 ```bash
-git clone https://github.com/marmos91/dotfiles.git
-cd dotfiles
+git clone https://github.com/marmos91/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 git submodule init
 git submodule update
 ```
@@ -26,8 +26,8 @@ git submodule update
 Run the following command
 
 ```bash
-chmod +x ./install.sh
-./install.sh
+chmod +x ~/.dotfiles/install.sh
+~/.dotfiles/install.sh
 ```
 
 All the needed tools will be downloaded automatically.
@@ -46,9 +46,9 @@ Here is a list of places to start:
 - [`install/zsh.sh`](./install/zsh.sh): contains the list of all the zsh plugins
 
 The config folder contains all the configurations of the applications we are going to install.
-The most interesting path is definitely `config/nvim/lua/custom` where you can find my configuration for _neovim_.
+The most interesting path is definitely [`config/nvim/lua/custom`](./config/nvim/lua/custom) where you can find my configuration for _neovim_.
 
-Finally, the `dotfiles` folder contains all my personal dotfiles, feel free to modify them as you see fit.
+Finally, the [`dotfiles`](./dotfiles/) folder contains all my personal dotfiles, feel free to modify them as you see fit.
 
 ## Acknowledgements
 
