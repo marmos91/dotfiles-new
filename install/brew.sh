@@ -33,7 +33,6 @@ apps=(
 	chafa
 	clang-format
 	commitlint
-	code-minimap
 	cmake
 	diff-so-fancy
 	dockutil
