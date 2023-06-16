@@ -73,6 +73,9 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/linux,macos,windows
 
+# logs
+*.log
+
 # dotfiles
 .*
 !dotfiles/.*
@@ -81,6 +84,9 @@ $RECYCLE.BIN/
 
 # private binaries
 bin/backup
+
+# private configurations
+config/gh/hosts.yml
 
 # backups
 karabiner/automatic_backups
