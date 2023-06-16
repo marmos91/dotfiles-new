@@ -28,6 +28,7 @@ titlize "
                                                                                                                                                                  
 "
 
+# shellcheck disable=2155
 export DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export COMPUTER_NAME="nyarlathotep"
 
@@ -49,7 +50,7 @@ log "[3/14] Installing Homebrew cask and favorites applications"
 . "$DOTFILES_DIR/install/brew-cask.sh"
 log "[✓] Homebrew cask and favorites applications installed"
 
-log "[4/14] Installing Mac app store applications"
+# log "[4/14] Installing Mac app store applications"
 . "$DOTFILES_DIR/install/mas.sh"
 log "[✓] Mac app store applications installed"
 
@@ -70,16 +71,16 @@ log "[8/14] Setting OSX defaults"
 log "[✓] OSX defaults set"
 
 log "[9/14] Setting OSX dock"
-# . "$DOTFILES_DIR/macos/dock.sh"
+. "$DOTFILES_DIR/macos/dock.sh"
 log "[✓] OSX dock set"
 
 log "[10/14] Setting up dotfiles"
 . "$DOTFILES_DIR/install/dotfiles.sh"
 log "[✓] Dotfiles set"
 
-log "[11/14] Installing NeoVim related stuff"
-. "$DOTFILES_DIR/install/nvim.sh"
-log "[✓] NeoVim installed"
+log "[11/14] Installing Config related stuff"
+. "$DOTFILES_DIR/install/config.sh"
+log "[✓] Config installed"
 
 log "[12/14] Installing Tmux related stuff"
 . "$DOTFILES_DIR/install/tmux.sh"
