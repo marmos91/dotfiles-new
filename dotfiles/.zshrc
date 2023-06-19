@@ -41,6 +41,7 @@ zstyle ':omz:plugins:nvm' lazy yes
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+eval "$(zoxide init zsh)" 
 
 # Preferred editor
 export EDITOR="nvim"
