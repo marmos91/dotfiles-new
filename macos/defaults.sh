@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if ! is-macos ; then
+	echo "Skipped: MacOS defaults"
+	return
+fi
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'

@@ -75,7 +75,7 @@ apps=(
 	yq
 	wget
 	windmilleng/tap/tilt
-	z
+	zoxide
 )
 
 "$(brew --prefix)/opt/fzf/install" --completion --key-bindings
