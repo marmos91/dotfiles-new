@@ -44,10 +44,9 @@ M.treesitter = {
 	autotag = {
 		enable = true,
 	},
-	-- Temporary disabling this due to a bug with tsserver indentation
-	-- indent = {
-	-- 	enable = true,
-	-- },
+	indent = {
+		enable = true,
+	},
 }
 
 -- git support in nvimtree
