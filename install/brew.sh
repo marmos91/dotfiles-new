@@ -37,14 +37,15 @@ apps=(
 	diff-so-fancy
 	dockutil
 	editorconfig-checker
+	exa
 	fd
+	ffmpeg
+	fzf
 	gh
 	git-lfs
 	golang
 	go-task
 	gpg
-	ffmpeg
-	fzf
 	helm
 	hub
 	kubectl

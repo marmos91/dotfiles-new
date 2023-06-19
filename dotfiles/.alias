@@ -6,6 +6,9 @@ alias gg=lazygit
 alias top=btop
 alias python="python3"
 alias code="code-insiders"
+alias ls="exa"
+alias la="exa -lah"
+alias tree="exa --tree"
 
 npkill() {
     find "$@" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
