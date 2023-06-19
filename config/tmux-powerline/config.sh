@@ -1,16 +1,19 @@
+#!/usr/bin/env bash
+
 # Default configuration file for tmux-powerline.
+
 # Modeline {
 #	 vi: foldmarker={,} foldmethod=marker foldlevel=0 tabstop=4 filetype=sh
 # }
 
 # General {
 # Show which segment fails and its exit code.
-export TMUX_POWERLINE_DEBUG_MODE_ENABLED="false"
+export TMUX_POWERLINE_DEBUG_MODE_ENABLED="true"
 # Use patched font symbols.
 export TMUX_POWERLINE_PATCHED_FONT_IN_USE="true"
 
 # The theme to use.
-export TMUX_POWERLINE_THEME="default"
+export TMUX_POWERLINE_THEME="catppuccin"
 # Overlay directory to look for themes. There you can put your own themes outside the repo. Fallback will still be the "themes" directory in the repo.
 export TMUX_POWERLINE_DIR_USER_THEMES="${XDG_CONFIG_HOME:-$HOME/.config}/tmux-powerline/themes"
 # Overlay directory to look for segments. There you can put your own segments outside the repo. Fallback will still be the "segments" directory in the repo.
@@ -25,9 +28,9 @@ export TMUX_POWERLINE_STATUS_INTERVAL="1"
 export TMUX_POWERLINE_STATUS_JUSTIFICATION="centre"
 
 # The maximum length of the left status bar.
-export TMUX_POWERLINE_STATUS_LEFT_LENGTH="60"
+export TMUX_POWERLINE_STATUS_LEFT_LENGTH="120"
 # The maximum length of the right status bar.
-export TMUX_POWERLINE_STATUS_RIGHT_LENGTH="90"
+export TMUX_POWERLINE_STATUS_RIGHT_LENGTH="120"
 
 # Uncomment these if you want to enable tmux bindings for muting (hiding) one of the status bars.
 # E.g. this example binding would mute the left status bar when pressing <prefix> followed by Ctrl-[
