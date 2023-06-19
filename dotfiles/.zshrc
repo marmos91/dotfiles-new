@@ -67,4 +67,7 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # includes hidden files
 
+# Source aliases again to override zsh 
+source ~/.alias
+
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
