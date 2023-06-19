@@ -10,6 +10,15 @@ sudo apt install -y software-properties-common
 
 sudo apt update
 
+export DEBIAN_FRONTEND=noninteractive
+export DEBCONF_NONINTERACTIVE_SEEN=true
+
+truncate -s0 /tmp/preseed.cfg
+echo "tzdata tzdata/Areas select Europe" >>/tmp/preseed.cfg
+echo "tzdata tzdata/Zones/Europe select Zurich" >>/tmp/preseed.cfg
+debconf-set-selections /tmp/preseed.cfg &&
+	rm -f /etc/timezone /etc/localtime
+
 apps=(
 	awscli
 	bat

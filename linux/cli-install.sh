@@ -12,10 +12,10 @@ if ! is-executable nvim; then
 	sha256sum -c nvim-linux64.tar.gz.sha256sum
 
 	tar xzvf nvim-linux64.tar.gz
-	mv nvim-linux64/bin/* /usr/bin/
-	mv nvim-linux64/lib/* /usr/lib/
-	mv nvim-linux64/man/* /usr/man/
-	mv nvim-linux64/share/* /usr/share/
+	sudo mv nvim-linux64/bin/* /usr/bin/
+	sudo mv nvim-linux64/lib/* /usr/lib/
+	sudo mv nvim-linux64/man/* /usr/man/
+	sudo mv nvim-linux64/share/* /usr/share/
 
 	rm ./nvim-linux64.tar.gz
 	rm ./nvim-linux64.tar.gz.sha256sum
