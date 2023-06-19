@@ -43,9 +43,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Load Z environment
-. $(brew --prefix)/etc/profile.d/z.sh
-
 # Preferred editor
 export EDITOR="nvim"
 
