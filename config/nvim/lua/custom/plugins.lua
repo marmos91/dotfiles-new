@@ -35,6 +35,10 @@ local plugins = {
 		lazy = false,
 	},
 	{
+		"ojroques/vim-oscyank",
+		lazy = false,
+	},
+	{
 		"kylechui/nvim-surround",
 		version = "*",
 		event = "VeryLazy",

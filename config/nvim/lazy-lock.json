@@ -32,6 +32,7 @@
   "vim-bazel": { "branch": "master", "commit": "31b0d5e4f51da1aeb56d65bf505a744e6de405de" },
   "vim-kitty": { "branch": "main", "commit": "9a90c68655d20e22f5ff249232c83ab46870f74d" },
   "vim-maktaba": { "branch": "master", "commit": "fe95bb10f6bb250943a44632107f6a3d76ce5f28" },
+  "vim-oscyank": { "branch": "main", "commit": "5947a6c6727841b989ac41758f99af154fa5d801" },
   "vim-tmux-navigator": { "branch": "master", "commit": "cdd66d6a37d991bba7997d593586fc51a5b37aa8" },
   "which-key.nvim": { "branch": "main", "commit": "e271c28118998c93a14d189af3395812a1aa646c" }
 }

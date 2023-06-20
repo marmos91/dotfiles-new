@@ -36,6 +36,20 @@ else
 	echo "Skipping nvm"
 fi
 
+if ! is-executable bazelisk; then
+	wget https://github.com/bazelbuild/bazelisk/releases/download/v1.17.0/bazelisk-linux-amd64
+	chmod +x bazelisk-linux-amd64
+	sudo mv bazelisk-linux-amd64 /usr/bin/bazelisk
+else
+	echo "Skipping bazelisk"
+fi
+
+if ! is-executable luacheck -a is-executable luarocks; then
+	luarocks install luacheck
+else
+	echo "Skipping luacheck"
+fi
+
 if ! is-executable lazygit; then
 	LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
 

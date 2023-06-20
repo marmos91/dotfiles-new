@@ -11,6 +11,7 @@ if ! is-executable npm; then
 fi
 
 nvm install 16
+nvm use 16
 
 # Globally install with npm
 

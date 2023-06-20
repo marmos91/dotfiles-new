@@ -18,6 +18,10 @@ M.general = {
 		-- move by page while centering cursor
 		["<C-d>"] = { "<C-d>zz", "go down half page" },
 		["<C-u>"] = { "<C-u>zz", "go up half page" },
+
+		-- OSCYank
+		["<leader>c"] = { "<Plug>OSCYankOperator", "OSCYank" },
+		["<leader>cc"] = { "<leader>c_", "OSCYank line" },
 	},
 	i = {
 		-- move a line up/down
@@ -28,6 +32,9 @@ M.general = {
 		-- move a line up/down
 		["<S-j>"] = { ":m '>+1<CR>gv=gv" },
 		["<S-k>"] = { ":m '<-2<CR>gv=gv" },
+
+		-- OSCYank
+		["<leader>c"] = { "<Plug>OSCYankVisual", "OSCYank" },
 	},
 }
 
