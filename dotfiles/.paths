@@ -19,3 +19,6 @@ addToPath "$GOPATH/bin"
 # Rust stuff
 addToPath "$HOME/.cargo/bin"
 addToPath "$HOME/.rustup"
+
+# Lua stuff
+addToPath "$HOME/.luarocks/bin"
