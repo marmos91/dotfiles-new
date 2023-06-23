@@ -8,7 +8,7 @@ fi
 brew tap homebrew/cask-fonts
 
 fonts=(
-	font-fira-code
+	font-fira-code-nerd-font
 	font-jetbrains-mono-nerd-font
 )
 

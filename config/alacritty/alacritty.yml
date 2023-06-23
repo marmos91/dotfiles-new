@@ -79,7 +79,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  #startup_mode: Windowed
+  startup_mode: Fullscreen
 
   # Window title
   title: Alacritty
@@ -131,10 +131,11 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: JetBrainsMono Nerd Font Mono 
+    # family: JetBrainsMono Nerd Font Mono 
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Retina
 
   # Bold font face
   bold:
@@ -142,7 +143,8 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrainsMono Nerd Font Mono 
+    # family: JetBrainsMono Nerd Font Mono 
+    # family: Iosevka 
 
     # The `style` can be specified to pick a specific face.
     style: Medium
@@ -153,7 +155,8 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrainsMono Nerd Font Mono 
+    # family: JetBrainsMono Nerd Font Mono 
+    # family: Iosevka 
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -164,13 +167,14 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrainsMono Nerd Font Mono 
+    # family: JetBrainsMono Nerd Font Mono 
+    # family: Iosevka
 
     # The `style` can be specified to pick a specific face.
     style: Medium Italic
 
   # Point size
-  size: 13.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -348,7 +352,7 @@ font:
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
-#bell:
+bell:
   # Visual Bell Animation
   #
   # Animation effect for flashing the screen when the visual bell is rung.
@@ -364,11 +368,11 @@ font:
   #   - EaseOutExpo
   #   - EaseOutCirc
   #   - Linear
-  #animation: EaseOutExpo
+  animation: EaseOutExpo
 
   # Duration of the visual bell flash in milliseconds. A `duration` of `0` will
   # disable the visual bell animation.
-  #duration: 0
+  duration: 0
 
   # Visual bell animation color.
   #color: '#ffffff'
@@ -439,7 +443,7 @@ cursor:
   #thickness: 0.15
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #
