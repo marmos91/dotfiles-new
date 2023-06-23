@@ -12,6 +12,7 @@ dockutil --no-restart --add --replacing "/Applications/WhatsApp.app"
 dockutil --no-restart --add --replacing "/Applications/Messages.app"
 dockutil --no-restart --add --replacing "/Applications/Telegram.app"
 dockutil --no-restart --add --replacing "/Applications/Slack.app"
+dockutil --no-restart --add --replacing "/Applications/Alacritty.app"
 dockutil --no-restart --add --replacing "/Applications/Spotify.app"
 
 defaults write com.apple.dock show-recents -bool FALSE
