@@ -3,6 +3,14 @@ require("custom.autocmds")
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+vim.o.termguicolors = true
+--
+vim.o.foldcolumn = "1"
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4

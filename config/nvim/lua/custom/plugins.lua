@@ -31,8 +31,32 @@ local plugins = {
 		opts = overrides.mason,
 	},
 	{
-		"fladson/vim-kitty",
+		"pmizio/typescript-tools.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		ft = { "typescript", "typescriptreact" },
+		opts = overrides.typescript,
+	},
+	{
+		"kevinhwang91/nvim-ufo",
+		dependencies = {
+			"kevinhwang91/promise-async",
+			{
+				"luukvbaal/statuscol.nvim",
+				config = function()
+					local builtin = require("statuscol.builtin")
+					require("statuscol").setup({
+						relculright = true,
+						segments = {
+							{ text = { builtin.foldfunc }, click = "v:lua.ScFa" },
+							{ text = { "%s" }, click = "v:lua.ScSa" },
+							{ text = { builtin.lnumfunc, " " }, click = "v:lua.ScLa" },
+						},
+					})
+				end,
+			},
+		},
 		lazy = false,
+		opts = overrides.ufo,
 	},
 	{
 		"kylechui/nvim-surround",
