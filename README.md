@@ -7,7 +7,7 @@ Personal dotfiles repository.
 ## Highlights
 
 - [Neovim](https://neovim.io/) configured through [NVChad](https://nvchad.com/)
-- [Kitty](https://sw.kovidgoyal.net/kitty/) and [iTerm2](https://iterm2.com/) installed (Kitty used as main terminal emulator)
+- [Alacritty](https://alacritty.org/), [Kitty](https://sw.kovidgoyal.net/kitty/) and [iTerm2](https://iterm2.com/) installed (Alacritty used as main terminal emulator)
 - [ZSH](https://www.zsh.org/) as default shell configured with [Oh My Zsh](https://ohmyz.sh/)
 - Powerful terminal management through [Tmux](https://github.com/tmux/tmux/wiki)
 - Support for Apple Silicon and Intel Macs

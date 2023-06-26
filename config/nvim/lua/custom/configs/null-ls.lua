@@ -28,6 +28,7 @@ local sources = {
 	}),
 	builtins.formatting.stylua,
 	builtins.formatting.shfmt,
+	builtins.formatting.markdownlint,
 	builtins.formatting.dprint.with({
 		filetypes = {
 			"typescript",
