@@ -89,6 +89,7 @@ bin/backup
 # private configurations
 config/gh/hosts.yml
 dotfiles/.p10k.zsh
+config/btop/btop.conf
 
 # backups
 karabiner/automatic_backups
