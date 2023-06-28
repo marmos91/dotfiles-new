@@ -32,6 +32,10 @@ chmod +x ~/.dotfiles/install.sh
 
 All the needed tools will be downloaded automatically.
 
+### Note
+
+You may have to restart neovim a few times for all the plugin to install correctly.
+
 ## Customization
 
 You are free to modify my configuration to suit your needs.
