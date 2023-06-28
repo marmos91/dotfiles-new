@@ -24,7 +24,7 @@ M.mason = {
 		"eslint-lsp",
 		"html-lsp",
 		"prettierd",
-		-- "typescript-language-server",
+		"typescript-language-server",
 	},
 }
 
@@ -63,32 +63,32 @@ M.ufo = {
 	end,
 }
 
-M.typescript = {
-	separate_diagnostic_server = true,
-	tsserver_plugins = {
-		"typescript-styled-plugin",
-	},
-	tsserver_format_options = {
-		enable = true,
-		insertSpaceAfterCommaDelimiter = true,
-		insertSpaceAfterConstructor = false,
-		insertSpaceAfterFunctionKeywordForAnonymousFunctions = false,
-		insertSpaceAfterKeywordsInControlFlowStatements = false,
-		insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis = false,
-		insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets = false,
-		insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
-		insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
-		insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces = false,
-		insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces = false,
-		insertSpaceAfterSemicolonInForStatements = true,
-		insertSpaceAfterTypeAssertion = false,
-		insertSpaceBeforeAndAfterBinaryOperators = true,
-		insertSpaceBeforeFunctionParenthesis = false,
-		placeOpenBraceOnNewLineForControlBlocks = true,
-		placeOpenBraceOnNewLineForFunctions = true,
-		semicolons = "ignore",
-	},
-}
+-- M.typescript = {
+-- 	separate_diagnostic_server = true,
+-- 	tsserver_plugins = {
+-- 		"typescript-styled-plugin",
+-- 	},
+-- 	tsserver_format_options = {
+-- 		enable = true,
+-- 		insertSpaceAfterCommaDelimiter = true,
+-- 		insertSpaceAfterConstructor = false,
+-- 		insertSpaceAfterFunctionKeywordForAnonymousFunctions = false,
+-- 		insertSpaceAfterKeywordsInControlFlowStatements = false,
+-- 		insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis = false,
+-- 		insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets = false,
+-- 		insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
+-- 		insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
+-- 		insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces = false,
+-- 		insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces = false,
+-- 		insertSpaceAfterSemicolonInForStatements = true,
+-- 		insertSpaceAfterTypeAssertion = false,
+-- 		insertSpaceBeforeAndAfterBinaryOperators = true,
+-- 		insertSpaceBeforeFunctionParenthesis = false,
+-- 		placeOpenBraceOnNewLineForControlBlocks = true,
+-- 		placeOpenBraceOnNewLineForFunctions = true,
+-- 		semicolons = "ignore",
+-- 	},
+-- }
 
 -- git support in nvimtree
 M.nvimtree = {

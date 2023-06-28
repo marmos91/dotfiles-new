@@ -46,12 +46,12 @@ local plugins = {
 		"williamboman/mason.nvim",
 		opts = overrides.mason,
 	},
-	{
-		"pmizio/typescript-tools.nvim",
-		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		ft = { "typescript", "typescriptreact" },
-		opts = overrides.typescript,
-	},
+	-- {
+	-- 	"pmizio/typescript-tools.nvim",
+	-- 	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	-- 	ft = { "typescript", "typescriptreact" },
+	-- 	opts = overrides.typescript,
+	-- },
 	{
 		"kevinhwang91/nvim-ufo",
 		dependencies = {
