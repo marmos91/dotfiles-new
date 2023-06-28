@@ -64,6 +64,7 @@ apps=(
 	python
 	python3
 	ripgrep
+	rust-analyzer
 	rclone
 	thefuck
 	tunnelblick

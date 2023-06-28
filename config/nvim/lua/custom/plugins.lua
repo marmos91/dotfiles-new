@@ -18,6 +18,22 @@ local plugins = {
 		end,
 	},
 	{
+		"rust-lang/rust.vim",
+		ft = "rust",
+		init = function()
+			vim.g.rustfmt_autosave = 1
+		end,
+	},
+	{
+		"simrat39/rust-tools.nvim",
+		ft = "rust",
+		dependencies = "neovim/nvim-lspconfig",
+		opts = overrides.rust_tools,
+		config = function(_, opts)
+			require("rust-tools").setup(opts)
+		end,
+	},
+	{
 		"christoomey/vim-tmux-navigator",
 		lazy = false,
 	},

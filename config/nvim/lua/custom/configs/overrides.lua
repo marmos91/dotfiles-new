@@ -1,3 +1,6 @@
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
+
 local M = {}
 
 M.mason = {
@@ -11,7 +14,6 @@ M.mason = {
 		"beautysh",
 		"shellcheck",
 		"pylint",
-		"rust-analyzer",
 		"gopls",
 		"markdownlint",
 		"dprint",
@@ -45,6 +47,13 @@ M.treesitter = {
 	},
 	indent = {
 		enable = true,
+	},
+}
+
+M.rust_tools = {
+	server = {
+		on_attach = on_attach,
+		capabilities = capabilities,
 	},
 }
 
