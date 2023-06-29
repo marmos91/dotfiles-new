@@ -54,6 +54,7 @@ apps=(
 	k9s
 	lazygit
 	lf
+	llvm
 	luarocks
 	luacheck
 	mas
