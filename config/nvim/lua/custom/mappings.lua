@@ -28,6 +28,14 @@ M.general = {
 		-- move a line up/down
 		["<S-j>"] = { ":m '>+1<CR>gv=gv" },
 		["<S-k>"] = { ":m '<-2<CR>gv=gv" },
+M.crates = {
+	n = {
+		["<leader>rcu"] = {
+			function()
+				require("crates").upgrade_all_crates()
+			end,
+			"Update crates",
+		},
 	},
 }
 

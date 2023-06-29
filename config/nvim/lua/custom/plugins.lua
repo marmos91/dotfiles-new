@@ -25,6 +25,13 @@ local plugins = {
 		end,
 	},
 	{
+		"saecki/crates.nvim",
+		tag = "v0.3.0",
+		ft = { "rust", "toml" },
+		dependencies = "nvim-lua/plenary.nvim",
+		opts = overrides.crates,
+	},
+	{
 		"simrat39/rust-tools.nvim",
 		ft = "rust",
 		dependencies = "neovim/nvim-lspconfig",
@@ -46,12 +53,6 @@ local plugins = {
 		"williamboman/mason.nvim",
 		opts = overrides.mason,
 	},
-	-- {
-	-- 	"pmizio/typescript-tools.nvim",
-	-- 	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-	-- 	ft = { "typescript", "typescriptreact" },
-	-- 	opts = overrides.typescript,
-	-- },
 	{
 		"kevinhwang91/nvim-ufo",
 		dependencies = {

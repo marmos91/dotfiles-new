@@ -57,6 +57,13 @@ M.rust_tools = {
 	},
 }
 
+M.crates = {
+	null_ls = {
+		enabled = true,
+		name = "crates.nvim",
+	},
+}
+
 M.ufo = {
 	provider_selector = function()
 		return { "treesitter", "indent" }
@@ -131,6 +138,7 @@ M.telescope = {
 }
 
 M.cmp = {
+	sources = { name = "crates" },
 	sorting = {
 		priority_weight = 2,
 		comparators = require("custom.configs.cmp").comparators,
