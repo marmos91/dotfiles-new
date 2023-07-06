@@ -138,7 +138,6 @@ M.telescope = {
 }
 
 M.cmp = {
-	sources = { name = "crates" },
 	sorting = {
 		priority_weight = 2,
 		comparators = require("custom.configs.cmp").comparators,
