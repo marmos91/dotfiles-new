@@ -94,10 +94,6 @@ log "[14/17] Installing coder related script"
 . "$DOTFILES_DIR/install/coder.sh"
 log "[✓] Coder installed"
 
-log "[15/17] Installing Kitty related script"
-. "$DOTFILES_DIR/install/kitty.sh"
-log "[✓] Kitty installed"
-
 log "[16/17] Installing Linux related stuff"
 . "$DOTFILES_DIR/linux/cli-install.sh"
 log "[✓] Linux stuff installed"
