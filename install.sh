@@ -28,9 +28,9 @@ titlize "
                                                                                                                                                                  
 "
 
-# shellcheck disable=2175
+# shellcheck disable=2175,2155
 export DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-export COMPUTER_NAME="nyarlathotep"
+export COMPUTER_NAME="amaterasu"
 
 log "Dotfiles launched from $DOTFILES_DIR"
 
@@ -70,13 +70,13 @@ log "[8/17] Installing Oh My Zsh"
 . "$DOTFILES_DIR/install/zsh.sh"
 log "[✓] Oh My Zsh installed"
 
-log "[9/17] Setting OSX defaults"
-. "$DOTFILES_DIR/macos/defaults.sh"
-log "[✓] OSX defaults set"
+# log "[9/17] Setting OSX defaults"
+# . "$DOTFILES_DIR/macos/defaults.sh"
+# log "[✓] OSX defaults set"
 
-log "[10/17] Setting OSX dock"
-. "$DOTFILES_DIR/macos/dock.sh"
-log "[✓] OSX dock set"
+# log "[10/17] Setting OSX dock"
+# . "$DOTFILES_DIR/macos/dock.sh"
+# log "[✓] OSX dock set"
 
 log "[11/17] Setting up dotfiles"
 . "$DOTFILES_DIR/install/dotfiles.sh"
