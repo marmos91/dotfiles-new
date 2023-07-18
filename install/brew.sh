@@ -62,6 +62,7 @@ apps=(
 	neofetch
 	nvm
 	ninja
+	pass
 	python
 	python3
 	ripgrep
