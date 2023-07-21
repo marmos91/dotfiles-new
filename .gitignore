@@ -81,6 +81,7 @@ $RECYCLE.BIN/
 !dotfiles/.*
 !.gitignore
 !.gitmodules
+!.password-store
 
 # private binaries
 bin/backup
