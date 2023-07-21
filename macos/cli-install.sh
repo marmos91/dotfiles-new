@@ -49,3 +49,36 @@ if ! directory-exists /Applications/Alacritty.app; then
 else
 	echo "Alacritty already installed. Skipping"
 fi
+
+if ! directory-exists /Applications/Telegram.app; then
+	wget https://osx.telegram.org/updates/Telegram.dmg
+
+	hdiutil mount Telegram.dmg
+
+	cp -R "/Volumes/Telegram/Telegram.app" /Applications
+
+	hdiutil unmount "/Volumes/Telegram/"
+
+	rm Telegram.dmg
+
+	echo "Telegram installed"
+else
+	echo "Telegram already installed. Skipping"
+fi
+
+if ! directory-exists "/Applications/CleanMyMac X.app"; then
+	wget https://dl.devmate.com/com.macpaw.CleanMyMac4/CleanMyMacX.dmg
+
+	hdiutil mount CleanMyMacX.dmg
+
+	cp -R "/Volumes/CleanMyMac X/CleanMyMac X.app" /Applications
+
+	hdiutil unmount "/Volumes/CleanMyMac X/"
+
+	rm CleanMyMacX.dmg
+
+	echo "CleanMyMacX installed"
+
+else
+	echo "CleanMyMacX already installed"
+fi
