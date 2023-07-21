@@ -12,7 +12,6 @@ apps=(
 	authy
 	bartender
 	bettertouchtool
-	cleanmymac
 	cubbit
 	docker
 	dropbox
@@ -22,16 +21,14 @@ apps=(
 	gpg-suite
 	handbrake
 	istat-menus
-	iterm2
+	iterm
 	logitech-options
 	karabiner-elements
-	nordvpn
 	obs
 	postman
 	slack
 	spotify
 	tableplus
-	# telegram
 	the-unarchiver
 	teamviewer
 	transmission
