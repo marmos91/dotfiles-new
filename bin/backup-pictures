@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Backing up Pictures"
+rsync -avPz --progress ~/Pictures/Masters/ "$BACKUP_VOLUME/Pictures/Masters"
+
+echo "Backing up Lightroom"
+rsync -avPz --progress ~/Pictures/Lightroom/ "$BACKUP_VOLUME/Pictures/Lightroom"

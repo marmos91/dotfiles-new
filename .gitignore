@@ -84,7 +84,6 @@ $RECYCLE.BIN/
 !.password-store
 
 # private binaries
-bin/backup
 *.bak
 
 # private configurations

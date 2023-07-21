@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Backing up Movies"
+rsync -avPz --progress ~/Movies/ "$BACKUP_VOLUME/Movies"
