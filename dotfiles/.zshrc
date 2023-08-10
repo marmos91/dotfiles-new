@@ -66,3 +66,4 @@ _comp_options+=(globdots) # includes hidden files
 
 # Source aliases again to override zsh 
 source ~/.alias
+
