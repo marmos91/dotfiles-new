@@ -62,6 +62,7 @@ apps=(
 	neofetch
 	nvm
 	ninja
+	pandoc
 	pass
 	python
 	python3

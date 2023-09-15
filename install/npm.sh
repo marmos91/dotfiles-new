@@ -18,6 +18,7 @@ nvm use 16
 packages=(
 	commitizen
 	@commitlint/{config-conventional,cli}
+	@compodoc/live-server
 	commitlint-format-json
 	npm-check
 	prettier-eslint-cli

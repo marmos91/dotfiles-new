@@ -144,6 +144,10 @@ local plugins = {
 		"hrsh7th/nvim-cmp",
 		opts = overrides.cmp,
 	},
+	{
+		"davidgranstrom/nvim-markdown-preview",
+		lazy = false,
+	},
 }
 
 return plugins
