@@ -148,6 +148,10 @@ local plugins = {
 		"davidgranstrom/nvim-markdown-preview",
 		lazy = false,
 	},
+	{
+		"eandrju/cellular-automaton.nvim",
+		lazy = false,
+	},
 }
 
 return plugins

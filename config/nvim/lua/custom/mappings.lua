@@ -18,6 +18,9 @@ M.general = {
 		-- move by page while centering cursor
 		["<C-d>"] = { "<C-d>zz", "Go down half page" },
 		["<C-u>"] = { "<C-u>zz", "Go up half page" },
+
+		-- Useless stuff
+		["<leader>fml"] = { "<cmd> CellularAutomaton make_it_rain<CR>", "F**k my life" },
 	},
 	i = {
 		-- move a line up/down
