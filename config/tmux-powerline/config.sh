@@ -23,7 +23,7 @@ export TMUX_POWERLINE_DIR_USER_SEGMENTS="${XDG_CONFIG_HOME:-$HOME/.config}/tmux-
 export TMUX_POWERLINE_STATUS_VISIBILITY="on"
 # The status bar refresh interval in seconds.
 # Note that events that force-refresh the status bar (such as window renaming) will ignore this.
-export TMUX_POWERLINE_STATUS_INTERVAL="1"
+export TMUX_POWERLINE_STATUS_INTERVAL="3"
 # The location of the window list. Can be {"absolute-centre, centre, left, right"}.
 export TMUX_POWERLINE_STATUS_JUSTIFICATION="centre"
 
@@ -110,7 +110,7 @@ export TMUX_POWERLINE_SEG_MAILCOUNT_GMAIL_INTERVAL="5"
 
 ## Maildir
 # Path to the maildir to check.
-export TMUX_POWERLINE_SEG_MAILCOUNT_MAILDIR_INBOX="/Users/marmos91/.mail/inbox/new"
+export TMUX_POWERLINE_SEG_MAILCOUNT_MAILDIR_INBOX="$HOME/.mail/inbox/new"
 
 ## mbox
 # Path to the mbox to check.
@@ -118,7 +118,7 @@ export TMUX_POWERLINE_SEG_MAILCOUNT_MBOX_INBOX=""
 
 ## mailcheck
 # Optional path to mailcheckrc
-export TMUX_POWERLINE_SEG_MAILCOUNT_MAILCHECKRC="/Users/marmos91/.mailcheckrc"
+export TMUX_POWERLINE_SEG_MAILCOUNT_MAILCHECKRC="$HOME/.mailcheckrc"
 # }
 
 # now_playing.sh {
@@ -193,6 +193,6 @@ export TMUX_POWERLINE_SEG_WEATHER_GREP="grep"
 export TMUX_POWERLINE_SEG_WEATHER_JSON="jq"
 # Your location
 # Latitude and Longtitude for use with yr.no
-TMUX_POWERLINE_SEG_WEATHER_LAT="47.3769"
-TMUX_POWERLINE_SEG_WEATHER_LON="8.5417"
+export TMUX_POWERLINE_SEG_WEATHER_LAT="47.3769"
+export TMUX_POWERLINE_SEG_WEATHER_LON="8.5417"
 # }
