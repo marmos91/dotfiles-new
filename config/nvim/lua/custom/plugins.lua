@@ -45,6 +45,13 @@ local plugins = {
 		lazy = false,
 	},
 	{
+		"github/copilot.vim",
+		lazy = false,
+		init = function()
+			vim.g.copilot_assume_mapped = true
+		end,
+	},
+	{
 		"mfussenegger/nvim-dap",
 	},
 	{
