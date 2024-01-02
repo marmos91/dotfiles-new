@@ -13,6 +13,7 @@ apps=(
 	bartender
 	bettertouchtool
 	cubbit
+	copilot-for-xcode
 	docker
 	dropbox
 	epic-games
