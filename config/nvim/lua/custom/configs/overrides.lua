@@ -39,6 +39,7 @@ M.treesitter = {
 		"toml",
 		"json",
 		"rust",
+		"swift",
 		"markdown",
 		"markdown_inline",
 	},
