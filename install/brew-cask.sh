@@ -12,7 +12,6 @@ apps=(
 	authy
 	bartender
 	bettertouchtool
-	cubbit
 	copilot-for-xcode
 	docker
 	dropbox
