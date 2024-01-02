@@ -25,6 +25,7 @@ apps=(
 	logitech-options
 	karabiner-elements
 	obs
+	obsidian
 	postman
 	slack
 	spotify
