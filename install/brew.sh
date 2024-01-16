@@ -69,6 +69,7 @@ apps=(
 	ripgrep
 	rust-analyzer
 	rclone
+	swiftlint
 	thefuck
 	tunnelblick
 	tig
