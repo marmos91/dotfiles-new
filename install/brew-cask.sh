@@ -32,6 +32,7 @@ apps=(
 	tableplus
 	the-unarchiver
 	teamviewer
+	tor-browser
 	transmission
 	tripmode
 	visual-studio-code
