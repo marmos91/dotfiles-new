@@ -6,7 +6,7 @@ return {
         "nvimdev/dashboard-nvim",
         event = "VimEnter",
         opts = function()
-            local logo = require("ascii").get_random("text", "neovim")
+            local logo = require("ascii").art.text.neovim.sharp
 
             for _ = 0, 8 do
                 table.insert(logo, 1, [[                                                                       ]])
