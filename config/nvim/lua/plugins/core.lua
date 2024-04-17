@@ -14,6 +14,7 @@ return {
             ensure_installed = {
                 "lua",
                 "css",
+                "cpp",
                 "go",
                 "javascript",
                 "typescript",
