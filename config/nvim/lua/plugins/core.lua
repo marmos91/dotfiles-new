@@ -48,6 +48,7 @@ return {
                 "pylint",
                 "gopls",
                 "markdownlint",
+                "marksman",
                 "dprint",
                 "shfmt",
 
