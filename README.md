@@ -6,9 +6,9 @@ Personal dotfiles repository.
 
 ## Highlights
 
-- [Neovim](https://neovim.io/) configured through [NVChad](https://nvchad.com/)
+- [Neovim](https://neovim.io/) configured through a custom lua configuration
 - [Alacritty](https://alacritty.org/), [Kitty](https://sw.kovidgoyal.net/kitty/) and [iTerm2](https://iterm2.com/) installed (Alacritty used as main terminal emulator)
-- [ZSH](https://www.zsh.org/) as default shell configured with [Oh My Zsh](https://ohmyz.sh/)
+- Fish as default shell configured with Fisher
 - Powerful terminal management through [Tmux](https://github.com/tmux/tmux/wiki)
 - Support for Apple Silicon and Intel Macs
 
@@ -47,7 +47,6 @@ Here is a list of places to start:
 - [`install/fonts.sh`](./install/fonts.sh): contains all the custom fonts
 - [`install/mas.sh`](./install/mas.sh): contains all the Mac App Store applications
 - [`install/npm.sh`](./install/npm.sh): contains all the node command line utilities
-- [`install/zsh.sh`](./install/zsh.sh): contains the list of all the zsh plugins
 
 The config folder contains all the configurations of the applications we are going to install.
 The most interesting path is definitely [`config/nvim/lua/custom`](./config/nvim/lua/custom) where you can find my configuration for _neovim_.

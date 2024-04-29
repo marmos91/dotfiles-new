@@ -71,8 +71,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/linux,macos,windows
-
 # logs
 *.log
 
@@ -90,6 +88,12 @@ $RECYCLE.BIN/
 config/gh/hosts.yml
 dotfiles/.p10k.zsh
 config/btop/btop.log
+
+### Fish ###
+fishd.*
+fish_history
+fish_variables
+config.local.fish
 
 # backups
 karabiner/automatic_backups
