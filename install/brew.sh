@@ -23,64 +23,62 @@ brew update
 brew upgrade
 
 apps=(
-	adobe-creative-cloud
+	# luacheck
+	# luarocks
 	awscli
 	bat
-	ibazel
 	bazelisk
-	buildifier
 	btop
+	buildifier
 	chafa
 	clang-format
-	commitlint
 	cmake
+	commitlint
 	diff-so-fancy
 	dockutil
 	editorconfig-checker
-	exa
+	eza
 	fd
 	ffmpeg
 	fzf
 	gh
 	git-lfs
-	golang
 	go-task
+	golang
 	gpg
 	helm
 	hub
-	kubectl
-	kubectx
+	ibazel
 	jq
 	k9s
+	kubectl
+	kubectx
 	lazygit
 	lf
 	llvm
-	luarocks
-	luacheck
 	mas
-	neovim
 	neofetch
-	nvm
+	neovim
 	ninja
+	nvm
 	pandoc
 	pass
 	python
 	python3
+	rclone
 	ripgrep
 	rust-analyzer
-	rclone
 	swiftlint
 	thefuck
-	tunnelblick
 	tig
-	tmux
 	tldr
+	tmux
 	tree
-	youtube-dl
-	yq
 	wget
 	windmilleng/tap/tilt
-	zoxide
+	youtube-dl
+	yq
+	fish
 )
 
 "$(brew --prefix)/opt/fzf/install" --completion --key-bindings

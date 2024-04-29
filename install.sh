@@ -66,10 +66,6 @@ log "[7/18] Installing NodeJS"
 . "$DOTFILES_DIR/install/npm.sh"
 log "[✓] NodeJS installed"
 
-log "[8/18] Installing Oh My Zsh"
-. "$DOTFILES_DIR/install/zsh.sh"
-log "[✓] Oh My Zsh installed"
-
 log "[9/18] Setting OSX defaults"
 . "$DOTFILES_DIR/macos/defaults.sh"
 log "[✓] OSX defaults set"
@@ -107,5 +103,7 @@ log "[17/18] Installing MacOS related stuff"
 log "[✓] Linux stuff installed"
 
 log "[✓] Dotfiles installed: run the following command to load the new configuration"
-echo "sudo chsh -s /bin/zsh"
-echo "source ~/.zshrc"
+
+sudo sh -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+chsh -s /opt/homebrew/bin/fish
+fish -c "fish_add_path /opt/homebrew/bin"
