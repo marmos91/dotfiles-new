@@ -1,68 +1,5 @@
 return {
     {
-        "christoomey/vim-tmux-navigator",
-    },
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "catppuccin",
-        },
-    },
-    {
-        "nvim-treesitter/nvim-treesitter",
-        opts = {
-            ensure_installed = {
-                "lua",
-                "css",
-                "cpp",
-                "go",
-                "javascript",
-                "typescript",
-                "tsx",
-                "toml",
-                "json",
-                "rust",
-                "swift",
-                "markdown",
-                "markdown_inline",
-            },
-        },
-        autotag = {
-            enable = true,
-        },
-        indent = {
-            enable = true,
-        },
-    },
-    {
-        "williamboman/mason.nvim",
-        opts = {
-            ensure_installed = {
-                -- lua stuff
-                "lua-language-server",
-                "stylua",
-
-                -- other stuff
-                "bash-language-server",
-                "beautysh",
-                "shellcheck",
-                "pylint",
-                "gopls",
-                "markdownlint",
-                "marksman",
-                "dprint",
-                "shfmt",
-
-                -- webdev stuff
-                "css-lsp",
-                "eslint-lsp",
-                "html-lsp",
-                "prettierd",
-                "typescript-language-server",
-            },
-        },
-    },
-    {
         "L3MON4D3/LuaSnip",
         keys = function()
             return {}
@@ -106,7 +43,29 @@ return {
                         fallback()
                     end
                 end, { "i", "s" }),
+                ["<C-k>"] = cmp.mapping({
+                    i = function()
+                        if cmp.visible() then
+                            require("notify")("visible")
+                            cmp.abort()
+                        else
+                            require("notify")("not visible")
+                            cmp.complete()
+                        end
+                    end,
+                    c = function()
+                        if cmp.visible() then
+                            require("notify")("visible")
+                            cmp.close()
+                        else
+                            require("notify")("not visible")
+                            cmp.complete()
+                        end
+                    end,
+                }),
             })
+
+            table.insert(opts.sources, { name = "emoji" })
         end,
     },
 }
