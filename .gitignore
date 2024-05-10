@@ -71,6 +71,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# End of https://www.gitignore.io/api/linux,macos,windows
+
 # logs
 *.log
 
@@ -94,6 +96,16 @@ fishd.*
 fish_history
 fish_variables
 config.local.fish
+
+# GPG
+dotfiles/.gnupg/tofu.db
+dotfiles/.gnupg/trustdb.gpg
+dotfiles/.gnupg/private-keys*
+dotfiles/.gnupg/crls.d
+dotfiles/.gnupg/*.kbx
+dotfiles/.gnupg/random_seed
+dotfiles/.gnupg/*.gpg-agent*
+dotfiles/.gnupg/*.scdaemon
 
 # backups
 karabiner/automatic_backups
