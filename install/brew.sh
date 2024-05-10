@@ -63,6 +63,7 @@ apps=(
 	nvm
 	pandoc
 	pass
+	pinentry-mac
 	python
 	python3
 	rclone
