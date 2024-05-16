@@ -7,6 +7,7 @@ return {
     },
     {
         "hrsh7th/nvim-cmp",
+        dependencies = { "alexander-born/cmp-bazel" },
         ---@param opts cmp.ConfigSchema
         opts = function(_, opts)
             local has_words_before = function()
@@ -66,6 +67,7 @@ return {
             })
 
             table.insert(opts.sources, { name = "emoji" })
+            table.insert(opts.sources, { name = "bazel" })
         end,
     },
 }

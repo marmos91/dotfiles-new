@@ -1,10 +1,5 @@
 return {
     {
-        "bazelbuild/vim-bazel",
-        dependencies = "google/vim-maktaba",
-        lazy = false,
-    },
-    {
         "neovim/nvim-lspconfig",
         opts = {
             servers = {
