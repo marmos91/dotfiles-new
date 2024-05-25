@@ -37,6 +37,7 @@ apps=(
 	tripmode
 	visual-studio-code
 	vlc
+	wezterm
 	whatsapp
 	zoom
 )
