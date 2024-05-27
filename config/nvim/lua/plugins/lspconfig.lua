@@ -147,6 +147,12 @@ return {
           },
         },
         tsserver = {},
+        eslint_d = {
+          settings = {
+            -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
+            workingDirectories = { mode = "auto" },
+          },
+        },
         pylsp = {},
         bzl = {},
         rust_analyzer = {},
