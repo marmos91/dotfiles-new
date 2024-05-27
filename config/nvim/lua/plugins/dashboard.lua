@@ -26,10 +26,51 @@ return {
         },
         config = {
           header = logo,
-          -- stylua: ignore
           center = {
-              { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
-              { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
+            {
+              action = "Telescope find_files",
+              desc = " Search files",
+              icon = "󰒲 ",
+              key = "s",
+            },
+            {
+              action = "ene | startinsert",
+              desc = " New File",
+              icon = " ",
+              key = "n",
+            },
+            {
+              action = "Telescope oldfiles",
+              desc = " Recent Files",
+              icon = " ",
+              key = "r",
+            },
+            {
+              action = "Telescope live_grep",
+              desc = " Find Text",
+              icon = " ",
+              key = "g",
+            },
+            {
+              action = function()
+                require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
+              end,
+              desc = " Config",
+              icon = " ",
+              key = "c",
+            },
+            {
+              action = "Lazy",
+              desc = " Lazy",
+              icon = "󰒲 ",
+              key = "l",
+            },
+            {
+              action = "qa",
+              desc = " Quit",
+              icon = " ",
+              key = "q",
+            },
           },
           footer = function()
             local stats = require("lazy").stats()
