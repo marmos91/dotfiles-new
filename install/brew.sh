@@ -18,13 +18,12 @@ fi
 brew tap windmilleng/tap
 brew tap cubbit/tap
 brew tap bazelbuild/tap
+brew tap jorgelbg/tap
 
 brew update
 brew upgrade
 
 apps=(
-	# luacheck
-	# luarocks
 	awscli
 	bat
 	bazelisk
@@ -64,16 +63,17 @@ apps=(
 	pandoc
 	pass
 	pinentry-mac
+	pinentry-touchid
 	python
 	python3
 	rclone
 	ripgrep
-	rust-analyzer
 	swiftlint
 	thefuck
 	tig
 	tldr
 	tmux
+	tmuxinator
 	tree
 	wget
 	windmilleng/tap/tilt
