@@ -29,4 +29,7 @@ require("lazy").setup("plugins", {
       lazy = "💤 ",
     },
   },
+  checker = {
+    enabled = true,
+  },
 })

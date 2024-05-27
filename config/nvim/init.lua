@@ -10,6 +10,9 @@ vim.g.have_nerd_font = true
 -- [[ Setting options ]]
 require("options")
 
+-- [[ Setup autocommands ]]
+require("autocmds")
+
 -- [[ Basic Keymaps ]]
 require("keymaps")
 
