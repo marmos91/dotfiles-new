@@ -1,105 +1,105 @@
 return {
-  {
-    "nvimdev/dashboard-nvim",
-    dependencies = {
-      "MaximilianLloyd/ascii.nvim",
-      "MunifTanjim/nui.nvim",
-    },
-    event = "VimEnter",
-    opts = function()
-      local logo = require("ascii").art.text.neovim.sharp
-
-      for _ = 0, 8 do
-        table.insert(logo, 1, [[                                                                       ]])
-      end
-
-      for _ = 0, 2 do
-        table.insert(logo, [[                                                                       ]])
-      end
-
-      local opts = {
-        theme = "doom",
-        hide = {
-          -- this is taken care of by lualine
-          -- enabling this messes up the actual laststatus setting after loading a file
-          statusline = false,
+    {
+        "nvimdev/dashboard-nvim",
+        dependencies = {
+            "MaximilianLloyd/ascii.nvim",
+            "MunifTanjim/nui.nvim",
         },
-        config = {
-          header = logo,
-          center = {
-            {
-              action = "Telescope find_files",
-              desc = " Search files",
-              icon = "󰒲 ",
-              key = "s",
-            },
-            {
-              action = "ene | startinsert",
-              desc = " New File",
-              icon = " ",
-              key = "n",
-            },
-            {
-              action = "Telescope oldfiles",
-              desc = " Recent Files",
-              icon = " ",
-              key = "r",
-            },
-            {
-              action = "Telescope live_grep",
-              desc = " Find Text",
-              icon = " ",
-              key = "g",
-            },
-            {
-              action = function()
-                require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
-              end,
-              desc = " Config",
-              icon = " ",
-              key = "c",
-            },
-            {
-              action = "Lazy",
-              desc = " Lazy",
-              icon = "󰒲 ",
-              key = "l",
-            },
-            {
-              action = "qa",
-              desc = " Quit",
-              icon = " ",
-              key = "q",
-            },
-          },
-          footer = function()
-            local stats = require("lazy").stats()
-            local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+        event = "VimEnter",
+        opts = function()
+            local logo = require("ascii").art.text.neovim.sharp
 
-            return {
-              "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms",
+            for _ = 0, 8 do
+                table.insert(logo, 1, [[                                                                       ]])
+            end
+
+            for _ = 0, 2 do
+                table.insert(logo, [[                                                                       ]])
+            end
+
+            local opts = {
+                theme = "doom",
+                hide = {
+                    -- this is taken care of by lualine
+                    -- enabling this messes up the actual laststatus setting after loading a file
+                    statusline = false,
+                },
+                config = {
+                    header = logo,
+                    center = {
+                        {
+                            action = "Telescope find_files",
+                            desc = " Search files",
+                            icon = "󰒲 ",
+                            key = "s",
+                        },
+                        {
+                            action = "ene | startinsert",
+                            desc = " New File",
+                            icon = " ",
+                            key = "n",
+                        },
+                        {
+                            action = "Telescope oldfiles",
+                            desc = " Recent Files",
+                            icon = " ",
+                            key = "r",
+                        },
+                        {
+                            action = "Telescope live_grep",
+                            desc = " Find Text",
+                            icon = " ",
+                            key = "g",
+                        },
+                        {
+                            action = function()
+                                require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
+                            end,
+                            desc = " Config",
+                            icon = " ",
+                            key = "c",
+                        },
+                        {
+                            action = "Lazy",
+                            desc = " Lazy",
+                            icon = "󰒲 ",
+                            key = "l",
+                        },
+                        {
+                            action = "qa",
+                            desc = " Quit",
+                            icon = " ",
+                            key = "q",
+                        },
+                    },
+                    footer = function()
+                        local stats = require("lazy").stats()
+                        local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+
+                        return {
+                            "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms",
+                        }
+                    end,
+                },
             }
-          end,
-        },
-      }
 
-      for _, button in ipairs(opts.config.center) do
-        button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
-        button.key_format = "  %s"
-      end
+            for _, button in ipairs(opts.config.center) do
+                button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
+                button.key_format = "  %s"
+            end
 
-      -- close Lazy and re-open when the dashboard is ready
-      if vim.o.filetype == "lazy" then
-        vim.cmd.close()
-        vim.api.nvim_create_autocmd("User", {
-          pattern = "DashboardLoaded",
-          callback = function()
-            require("lazy").show()
-          end,
-        })
-      end
+            -- close Lazy and re-open when the dashboard is ready
+            if vim.o.filetype == "lazy" then
+                vim.cmd.close()
+                vim.api.nvim_create_autocmd("User", {
+                    pattern = "DashboardLoaded",
+                    callback = function()
+                        require("lazy").show()
+                    end,
+                })
+            end
 
-      return opts
-    end,
-  },
+            return opts
+        end,
+    },
 }
