@@ -8,6 +8,12 @@ return {
     },
     cmd = "Neotree",
     keys = {
-        { "<C-n>", ":Neotree toggle reveal<CR>", { desc = "NeoTree reveal" } },
+        {
+            "<c-n>",
+            function()
+                require("neo-tree.command").execute({ toggle = true })
+            end,
+            desc = "Explorer NeoTree (Root Dir)",
+        },
     },
 }
