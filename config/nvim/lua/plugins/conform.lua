@@ -1,7 +1,10 @@
 return {
     {
         "stevearc/conform.nvim",
-        lazy = false,
+        event = { "BufReadPre", "BufNewFile" },
+        dependencies = {
+            "rcarriga/nvim-notify",
+        },
         keys = {
             {
                 "<leader>cf",
@@ -11,14 +14,32 @@ return {
                 mode = "",
                 desc = "[C]ode [F]ormat",
             },
+            {
+                "<leader>tf",
+                function()
+                    if vim.g.disable_autoformat then
+                        vim.api.nvim_command("FormatEnable")
+                    else
+                        vim.api.nvim_command("FormatDisable")
+                    end
+                end,
+                mode = "",
+                desc = "[T]oggle [F]ormat",
+            },
         },
         opts = {
-            notify_on_error = false,
+            notify_on_error = true,
             format_on_save = function(bufnr)
                 -- Disable "format_on_save lsp_fallback" for languages that don't
                 -- have a well standardized coding style. You can add additional
                 -- languages here or re-enable it for the disabled ones.
-                local disable_filetypes = { c = true, cpp = true }
+                local disable_filetypes = {
+                    c = true,
+                    cpp = true,
+                    -- Avoid tsserver to format code
+                    -- typescript = true,
+                    -- typescriptreact = true,
+                }
                 return {
                     timeout_ms = 500,
                     lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
@@ -29,6 +50,8 @@ return {
                 python = { "black" },
                 bzl = { "buildifier" },
                 bash = { "shfmt" },
+                typescript = {},
+                typescriptreact = {},
                 -- Conform can also run multiple formatters sequentially
                 -- python = { "isort", "black" },
                 --
@@ -37,6 +60,30 @@ return {
                 -- javascript = { { "prettierd", "prettier" } },
             },
         },
+        config = function(_, opts)
+            require("conform").setup(opts)
+
+            vim.api.nvim_create_user_command("FormatDisable", function()
+                vim.b.disable_autoformat = false
+                vim.g.disable_autoformat = true
+                require("notify")("Auto-formatting disabled", "info", {
+                    title = "Conform",
+                })
+            end, {
+                desc = "Disable autoformat-on-save",
+                bang = true,
+            })
+
+            vim.api.nvim_create_user_command("FormatEnable", function()
+                vim.b.disable_autoformat = false
+                vim.g.disable_autoformat = false
+                require("notify")("Auto-formatting enabled", "info", {
+                    title = "Conform",
+                })
+            end, {
+                desc = "Re-enable autoformat-on-save",
+            })
+        end,
     },
 }
 -- vim: ts=2 sts=2 sw=2 et

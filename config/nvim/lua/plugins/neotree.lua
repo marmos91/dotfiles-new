@@ -8,6 +8,6 @@ return {
     },
     cmd = "Neotree",
     keys = {
-        { "<C-n>", ":Neotree toggle<CR>", { desc = "NeoTree reveal" } },
+        { "<C-n>", ":Neotree toggle reveal<CR>", { desc = "NeoTree reveal" } },
     },
 }

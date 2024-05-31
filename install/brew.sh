@@ -19,6 +19,7 @@ brew tap windmilleng/tap
 brew tap cubbit/tap
 brew tap bazelbuild/tap
 brew tap jorgelbg/tap
+brew tap jesseduffield/lazydocker
 
 brew update
 brew upgrade
@@ -52,6 +53,7 @@ apps=(
 	k9s
 	kubectl
 	kubectx
+	lazydocker
 	lazygit
 	lf
 	llvm
