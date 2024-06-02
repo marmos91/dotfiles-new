@@ -6,8 +6,10 @@ local config = {
     font = wezterm.font("FiraCode Nerd Font Mono"),
     font_size = 12,
     enable_tab_bar = true,
-    tab_bar_at_bottom = true,
+    use_fancy_tab_bar = false,
+    tab_bar_at_bottom = false,
     window_background_opacity = 0.7,
+    window_close_confirmation = "NeverPrompt",
     macos_window_background_blur = 20,
     keys = {
         {
@@ -16,6 +18,8 @@ local config = {
             action = wezterm.action.ToggleFullScreen,
         },
     },
+    initial_rows = 40,
+    initial_cols = 133,
     window_padding = {
         left = 0,
         right = 0,
