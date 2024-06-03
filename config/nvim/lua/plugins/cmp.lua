@@ -13,6 +13,7 @@ return {
                     if vim.fn.has("win32") == 1 or vim.fn.executable("make") == 0 then
                         return
                     end
+
                     return "make install_jsregexp"
                 end)(),
                 dependencies = {
@@ -36,13 +37,13 @@ return {
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-cmdline",
+            "onsails/lspkind.nvim",
             {
                 "zbirenbaum/copilot-cmp",
-                dependencies = "copilot.lua",
-                opts = {},
-                config = function(_, opts)
-                    local copilot_cmp = require("copilot_cmp")
-                    copilot_cmp.setup(opts)
+                event = { "BufEnter" },
+                dependencies = "zbirenbaum/copilot.lua",
+                config = function()
+                    require("copilot_cmp").setup()
                 end,
             },
         },
@@ -50,6 +51,7 @@ return {
             -- See `:help cmp`
             local cmp = require("cmp")
             local luasnip = require("luasnip")
+            local lspkind = require("lspkind")
             luasnip.config.setup({})
 
             cmp.setup({
@@ -58,7 +60,21 @@ return {
                         luasnip.lsp_expand(args.body)
                     end,
                 },
-                completion = { completeopt = "menu,menuone,noinsert" },
+                completion = {
+                    completeopt = "menu,menuone,noinsert",
+                },
+                formatting = {
+                    expandable_indicator = true,
+                    fields = { "abbr", "kind" },
+                    format = lspkind.cmp_format({
+                        mode = "symbol_text",
+                        maxwidth = 50,
+                        ellipsis_char = "...",
+                        symbol_map = {
+                            Copilot = "",
+                        },
+                    }),
+                },
 
                 -- For an understanding of why these mappings were
                 -- chosen, you will need to read `:help ins-completion`
