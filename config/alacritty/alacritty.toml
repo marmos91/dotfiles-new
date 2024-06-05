@@ -43,10 +43,11 @@ multiplier = 3
 program = "/opt/homebrew/bin/fish"
 
 [window]
+blur = true
 decorations = "buttonless"
 dynamic_padding = true
 dynamic_title = true
-opacity = 0.9
+opacity = 0.6
 title = "Alacritty"
 
 [window.dimensions]
