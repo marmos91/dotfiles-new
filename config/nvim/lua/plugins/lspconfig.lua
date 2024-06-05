@@ -150,7 +150,12 @@ return {
                         },
                     },
                 },
-                tsserver = {},
+                tsserver = {
+                    capabilities = vim.tbl_extend("keep", capabilities, {
+                        documentFormattingProvider = false,
+                        documentRangeFormattingProvider = false,
+                    }),
+                },
                 eslint_d = {
                     settings = {
                         -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
