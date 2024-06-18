@@ -166,6 +166,7 @@ return {
                 bzl = {},
                 rust_analyzer = {},
                 gopls = {},
+                terraformls = {},
                 yamlls = {},
                 jsonls = {},
                 bashls = {},
