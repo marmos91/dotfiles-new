@@ -11,6 +11,7 @@ return {
             {
                 "<leader>nd",
                 function()
+                    ---@diagnostic disable-next-line: missing-parameter
                     require("notify").dismiss()
                 end,
                 mode = "",
