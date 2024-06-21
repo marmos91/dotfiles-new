@@ -26,6 +26,13 @@ vim.opt.breakindent = true
 -- Save undo history
 vim.opt.undofile = true
 
+-- views can only be fully collapsed with the global statusline
+vim.opt.laststatus = 3
+
+-- Default splitting will cause your main splits to jump when opening an edgebar.
+-- To prevent this, set `splitkeep` to either `screen` or `topline`.
+vim.opt.splitkeep = "screen"
+
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
