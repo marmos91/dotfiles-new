@@ -3,6 +3,7 @@ alias gg lazygit
 alias top btop
 alias python python3
 alias pinentry pinentry-mac
+alias cat bat
 
 if type -q eza
     alias ls eza
