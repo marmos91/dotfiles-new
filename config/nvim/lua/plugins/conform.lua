@@ -27,7 +27,14 @@ return {
                 desc = "[T]oggle [F]ormat",
             },
         },
+        ---@class ConformOpts
         opts = {
+            format = {
+                timeout_ms = 3000,
+                async = false,
+                quiet = false,
+                lsp_format = "fallback",
+            },
             notify_on_error = true,
             format_on_save = function(bufnr)
                 -- Disable "format_on_save lsp_fallback" for languages that don't
@@ -42,6 +49,7 @@ return {
                     lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
                 }
             end,
+            ---@type table<string, conform.FormatterUnit[]>
             formatters_by_ft = {
                 lua = { "stylua" },
                 python = { "black" },
