@@ -36,9 +36,6 @@ return {
                 local disable_filetypes = {
                     c = true,
                     cpp = true,
-                    -- Avoid tsserver to format code
-                    -- typescript = true,
-                    -- typescriptreact = true,
                 }
                 return {
                     timeout_ms = 500,
