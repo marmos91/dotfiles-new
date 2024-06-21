@@ -18,7 +18,7 @@ return {
             end
 
             local opts = {
-                theme = "doom",
+                theme = "hyper",
                 hide = {
                     -- this is taken care of by lualine
                     -- enabling this messes up the actual laststatus setting after loading a file
@@ -26,23 +26,24 @@ return {
                 },
                 config = {
                     header = logo,
-                    center = {
+                    week_header = {
+                        enable = false,
+                    },
+                    packages = { enable = true },
+                    shortcut = {
+                        { desc = "󰊳 Update", group = "@property", action = "Lazy update", key = "u" },
                         {
-                            action = "Telescope find_files",
-                            desc = " Search files",
-                            icon = "󰒲 ",
-                            key = "s",
-                        },
-                        {
-                            action = "ene | startinsert",
-                            desc = " New File",
                             icon = " ",
-                            key = "n",
+                            icon_hl = "@variable",
+                            desc = "Files",
+                            group = "Label",
+                            action = "Telescope find_files",
+                            key = "f",
                         },
                         {
                             action = "Telescope oldfiles",
                             desc = " Recent Files",
-                            icon = " ",
+                            icon = " ",
                             key = "r",
                         },
                         {
@@ -72,21 +73,8 @@ return {
                             key = "q",
                         },
                     },
-                    footer = function()
-                        local stats = require("lazy").stats()
-                        local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-
-                        return {
-                            "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms",
-                        }
-                    end,
                 },
             }
-
-            for _, button in ipairs(opts.config.center) do
-                button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
-                button.key_format = "  %s"
-            end
 
             -- close Lazy and re-open when the dashboard is ready
             if vim.o.filetype == "lazy" then
