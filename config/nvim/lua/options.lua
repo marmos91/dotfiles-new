@@ -16,12 +16,29 @@ vim.opt.mouse = "a"
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.opt.clipboard = "unnamedplus"
+-- only set clipboard if not in ssh, to make sure the OSC 52
+-- integration works automatically. Requires Neovim >= 0.10.0
+vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
 
--- Enable break indent
+vim.opt.completeopt = "menu,menuone,noselect"
+
+-- Indentation
+vim.opt.shiftwidth = 4
+vim.opt.smartindent = true
 vim.opt.breakindent = true
+
+-- Use spaces instead of tabs
+vim.opt.expandtab = true
+
+-- Special carachters
+vim.opt.fillchars = {
+    foldopen = "",
+    foldclose = "",
+    fold = " ",
+    foldsep = " ",
+    diff = "╱",
+    eob = " ",
+}
 
 -- Save undo history
 vim.opt.undofile = true
@@ -65,6 +82,17 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Folding (requires neovim > 0.10)
+vim.opt.smoothscroll = true
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldmethod = "expr"
+vim.opt.foldtext = ""
+vim.opt.foldlevel = 99
+
+-- Grep
+vim.opt.grepformat = "%f:%l:%c:%m"
+vim.opt.grepprg = "rg --vimgrep"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
