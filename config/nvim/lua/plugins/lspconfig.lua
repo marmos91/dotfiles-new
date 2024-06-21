@@ -55,10 +55,6 @@ return {
                         "[C]ode [W]orkspace [S]ymbols"
                     )
 
-                    -- Rename the variable under your cursor.
-                    --  Most Language Servers support renaming across files, etc.
-                    map("<leader>cr", vim.lsp.buf.rename, "[Code] [R]ename")
-
                     -- Execute a code action, usually your cursor needs to be on top of an error
                     -- or a suggestion from your LSP for this to activate.
                     map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
