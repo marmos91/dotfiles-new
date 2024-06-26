@@ -28,6 +28,7 @@ return {
                 ["<leader>b"] = { name = "[B]uffer", _ = "which_key_ignore" },
                 ["<leader>n"] = { name = "[N]otifications", _ = "which_key_ignore" },
                 ["<leader>d"] = { name = "[D]iagnostics", _ = "which_key_ignore" },
+                ["<leader>o"] = { name = "[O]bsidian", _ = "which_key_ignore" },
             })
             -- visual mode
             require("which-key").register({

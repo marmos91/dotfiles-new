@@ -1,4 +1,5 @@
 set -gx DOTFILES_DIR "$HOME/.dotfiles"
+set -gx OBSIDIAN_VAULTS_DIR "$HOME/vaults"
 
 # Language
 set -gx LANGUAGE en_US.UTF-8

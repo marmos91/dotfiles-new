@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Obsidian Note
+
+set -e
+
+if [ -z "$1" ]; then
+  echo "Error: you need to specify a vault name. Available vaults are:"
+  ls -1 $OBSIDIAN_VAULTS_DIR
+  exit 1
+fi
+
+if [ -z "$2" ]; then
+  echo "Error: A file name must be set, e.g. on \"the wonderful thing about tiggers\"."
+  exit 1
+fi
+
+VAULT=$1
+VAULT_DIR="$OBSIDIAN_VAULTS_DIR/$VAULT"
+FILENAME=$(echo "$2" | tr ' ' '-')
+FORMATTED_FILENAME=$(date "+%Y-%m-%d")_${FILENAME}.md
+
+cd "$VAULT_DIR" || exit
+touch "0-inbox/${FORMATTED_FILENAME}"
+nvim "0-inbox/${FORMATTED_FILENAME}"

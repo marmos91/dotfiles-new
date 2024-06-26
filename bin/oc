@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Obsidian Check
+
+set -e
+
+if [ -z "$1" ]; then
+  echo "Error: you need to specify a vault name. Available vaults are:"
+  ls -1 $OBSIDIAN_VAULTS_DIR
+  exit 1
+fi
+
+VAULT=$1
+VAULT_DIR="$OBSIDIAN_VAULTS_DIR/$VAULT"
+
+nvim $VAULT_DIR/0-inbox/*.md

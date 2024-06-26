@@ -10,3 +10,6 @@ if type -q eza
     alias ll "eza -l -g --icons"
     alias la "ll -a"
 end
+
+# Go inside Obsidian Vault dir
+alias oo "cd $OBSIDIAN_VAULTS_DIR"
