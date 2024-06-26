@@ -4,6 +4,11 @@ return {
     config = function()
         require("chatgpt").setup({
             api_key_cmd = "pass show personal/neovim/chatgpt",
+            chat = {
+                keymaps = {
+                    new_session = "<C-a>",
+                },
+            },
         })
     end,
     keys = {
