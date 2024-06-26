@@ -46,6 +46,7 @@ apps=(
 	go-task
 	golang
 	gpg
+	pngpaste
 	helm
 	hub
 	ibazel
