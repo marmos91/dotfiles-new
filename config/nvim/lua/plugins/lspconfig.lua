@@ -159,6 +159,7 @@ return {
                         workingDirectories = { mode = "auto" },
                     },
                 },
+                marksman = {},
                 pylsp = {},
                 bzl = {},
                 rust_analyzer = {},
@@ -183,6 +184,7 @@ return {
             vim.list_extend(ensure_installed, {
                 "stylua", -- Used to format Lua code
                 "markdownlint", -- Used to lint markdown files
+                "markdown-toc",
                 "eslint_d",
                 "black",
                 "shfmt",

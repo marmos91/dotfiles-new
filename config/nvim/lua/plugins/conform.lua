@@ -49,12 +49,13 @@ return {
                     lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
                 }
             end,
-            ---@type table<string, conform.FormatterUnit[]>
             formatters_by_ft = {
                 lua = { "stylua" },
                 python = { "black" },
                 bzl = { "buildifier" },
                 bash = { "shfmt" },
+                ["markdown"] = { "markdownlint", "markdown-toc" },
+                ["markdown.mdx"] = { "markdownlint", "markdown-toc" },
                 typescript = {},
                 typescriptreact = {},
                 -- Conform can also run multiple formatters sequentially
