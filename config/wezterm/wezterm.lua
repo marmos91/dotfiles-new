@@ -28,7 +28,7 @@ local config = {
         bottom = 0,
     },
     default_prog = { "/opt/homebrew/bin/fish" },
-    window_decorations = "NONE",
+    window_decorations = "RESIZE",
 }
 
 return config

@@ -20,6 +20,7 @@ brew tap cubbit/tap
 brew tap bazelbuild/tap
 brew tap jorgelbg/tap
 brew tap jesseduffield/lazydocker
+brew tap koekeishiya/formulae
 
 brew update
 brew upgrade
@@ -77,9 +78,11 @@ apps=(
 	tldr
 	tmux
 	tmuxinator
+	skhd
 	tree
 	wget
 	windmilleng/tap/tilt
+	yabai
 	youtube-dl
 	yq
 	fish

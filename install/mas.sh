@@ -8,7 +8,6 @@ fi
 brew install mas
 
 apps=(
-	441258766 # Magnet
 	562184107 # LanScan Pro
 	497799835 # XCode
 )
