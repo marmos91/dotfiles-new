@@ -85,5 +85,10 @@ return {
             "<cmd>!rm '%:p'<cr>:bd<cr>",
             desc = "[O]bsidian [D]elete current buffer",
         },
+        {
+            "<leader>oo",
+            "<cmd>!obsidian<cr>",
+            desc = "[O]bsidian [O]pen",
+        },
     },
 }
