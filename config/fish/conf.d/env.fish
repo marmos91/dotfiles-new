@@ -1,6 +1,8 @@
 set -gx DOTFILES_DIR "$HOME/.dotfiles"
 set -gx OBSIDIAN_VAULTS_DIR "$HOME/vaults"
 
+set -gx BACKUP_VOLUME "/Volumes/BackupMarco"
+
 # Language
 set -gx LANGUAGE en_US.UTF-8
 set -gx LC_ALL en_US.UTF-8

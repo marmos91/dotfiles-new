@@ -2,7 +2,7 @@
 
 echo "Backing up dotfiles"
 rsync -avPz --progress ~/.aws/ "$BACKUP_VOLUME/.aws"
-rsync -avPz --progress ~/.docker/ "$BACKUP_VOLUME/.docker"
+# rsync -avPz --progress ~/.docker/ "$BACKUP_VOLUME/.docker"
 rsync -avPz --progress ~/.kube/config "$BACKUP_VOLUME/.kube"
 rsync -avPz --progress ~/.kube/kubectx "$BACKUP_VOLUME/.kube"
 rsync -avPz --progress ~/.ssh/ "$BACKUP_VOLUME/.ssh"
