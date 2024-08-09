@@ -22,7 +22,7 @@ vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system 
 
 vim.opt.completeopt = "menu,menuone,noselect"
 
-vim.opt.conceallevel = 1
+vim.opt.conceallevel = 2
 
 -- Indentation
 vim.opt.shiftwidth = 4
