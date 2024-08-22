@@ -1,9 +1,6 @@
-[submodule "iterm/catpuccin"]
-	path = iterm/catpuccin
-	url = https://github.com/catppuccin/iterm.git
-[submodule "config/alacritty/catppuccin"]
-	path = config/alacritty/catppuccin
+[submodule "dot_config/alacritty/catppuccin"]
+	path = dot_config/alacritty/catppuccin
 	url = https://github.com/catppuccin/alacritty.git
-[submodule ".password-store"]
-	path = .password-store
+[submodule "dot_password-store"]
+	path = dot_password-store
 	url = git@github.com:marmos91/password-store.git
