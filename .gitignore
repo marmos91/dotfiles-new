@@ -76,36 +76,14 @@ $RECYCLE.BIN/
 # logs
 *.log
 
-# dotfiles
-.*
-!dotfiles/.*
-!.gitignore
-!.gitmodules
-!.password-store
-
 # private binaries
 *.bak
-
-# private configurations
-config/gh/hosts.yml
-dotfiles/.p10k.zsh
-config/btop/btop.log
 
 ### Fish ###
 fishd.*
 fish_history
 fish_variables
 config.local.fish
-
-# GPG
-dotfiles/.gnupg/tofu.db
-dotfiles/.gnupg/trustdb.gpg
-dotfiles/.gnupg/private-keys*
-dotfiles/.gnupg/crls.d
-dotfiles/.gnupg/*.kbx
-dotfiles/.gnupg/random_seed
-dotfiles/.gnupg/*.gpg-agent*
-dotfiles/.gnupg/*.scdaemon
 
 # backups
 karabiner/automatic_backups
