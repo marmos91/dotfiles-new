@@ -1,6 +1,3 @@
 [submodule "dot_config/alacritty/catppuccin"]
 	path = dot_config/alacritty/catppuccin
 	url = https://github.com/catppuccin/alacritty.git
-[submodule "dot_password-store"]
-	path = dot_password-store
-	url = git@github.com:marmos91/password-store.git
