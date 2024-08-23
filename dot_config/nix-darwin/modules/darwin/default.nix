@@ -110,6 +110,7 @@
     masApps = { };
     casks = [
       "arc"
+      "cleanmymac"
       "gpg-suite"
       "logi-options-plus"
       "nikitabobko/tap/aerospace"
