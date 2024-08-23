@@ -4,6 +4,7 @@
 
   # Install programs for current user
   home.packages = with pkgs; [
+    _1password
     awscli
     bat
     bazelisk
