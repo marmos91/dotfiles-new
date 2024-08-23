@@ -28,6 +28,7 @@
     reattach-to-user-namespace
     ripgrep
     rustup
+    tilt
     tldr
     wget
     yt-dlp

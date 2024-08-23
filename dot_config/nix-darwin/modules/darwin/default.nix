@@ -112,6 +112,7 @@
       "arc"
       "gpg-suite"
       "logi-options-plus"
+      "nikitabobko/tap/aerospace"
       "raycast"
       "spotify"
       "telegram-desktop"
