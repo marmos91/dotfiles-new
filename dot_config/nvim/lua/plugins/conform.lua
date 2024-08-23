@@ -56,6 +56,7 @@ return {
                 bash = { "shfmt" },
                 ["markdown"] = { "markdownlint", "markdown-toc" },
                 ["markdown.mdx"] = { "markdownlint", "markdown-toc" },
+                nix = { "nixfmt" },
                 typescript = {},
                 typescriptreact = {},
                 -- Conform can also run multiple formatters sequentially
