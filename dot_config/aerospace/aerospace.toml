@@ -98,8 +98,12 @@ alt-k = 'focus up'
 alt-l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus-monitor
-alt-s = "focus-monitor left"
-alt-g = "focus-monitor right"
+alt-g = "focus-monitor --wrap-around next"
+alt-s = "focus-monitor --wrap-around prev"
+
+# See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-monitor
+alt-shift-g = ["move-node-to-monitor --wrap-around next", "focus-monitor --wrap-around next"]
+alt-shift-s = ["move-node-to-monitor --wrap-around prev", "focus-monitor --wrap-around prev"]
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#fullscreen
 alt-shift-f = "fullscreen"
