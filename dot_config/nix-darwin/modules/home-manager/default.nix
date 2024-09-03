@@ -5,7 +5,6 @@
   # Install programs for current user
   home.packages = with pkgs; [
     _1password
-    awscli
     bat
     bazelisk
     btop
@@ -21,6 +20,7 @@
     go-task
     go_1_23
     k9s
+    kubectl
     kubectx
     lazygit
     neofetch

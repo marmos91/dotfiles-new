@@ -49,7 +49,7 @@
       "/System/Applications/Mail.app"
       "/System/Applications/Messages.app"
       "/Applications/Whatsapp.app"
-      "/Applications/Telegram Desktop.app"
+      "/Applications/Telegram.app"
       "/Applications/Slack.app"
       "/Applications/Wezterm.app"
       "/Applications/Spotify.app"
@@ -109,6 +109,7 @@
     caskArgs.no_quarantine = true;
     masApps = { };
     casks = [
+      "adobe-creative-cloud"
       "arc"
       "cleanmymac"
       "gpg-suite"
@@ -116,10 +117,10 @@
       "nikitabobko/tap/aerospace"
       "raycast"
       "spotify"
-      "telegram-desktop"
       "visual-studio-code"
       "wezterm"
     ];
-    brews = [ "clang-format" "nvm" "tmux" "ibazel" "pinentry-mac" "helm" ];
+    brews =
+      [ "awscli" "clang-format" "nvm" "tmux" "ibazel" "pinentry-mac" "helm" ];
   };
 }
