@@ -3,7 +3,7 @@ return {
     event = "VeryLazy",
     config = function()
         require("chatgpt").setup({
-            api_key_cmd = "pass show personal/neovim/chatgpt",
+            api_key_cmd = "op read op://Private/k7cml7dfe4ojo446b6rkc23q5m/credential --no-newline",
             chat = {
                 keymaps = {
                     new_session = "<C-a>",
